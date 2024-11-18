@@ -1,0 +1,4 @@
+#ifndef HASHTABLE_STRUCTS_H
+# define HASHTABLE_STRUCTS_H
+
+#endif

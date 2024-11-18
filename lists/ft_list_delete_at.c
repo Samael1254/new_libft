@@ -1,0 +1,23 @@
+#include "ft_list.h"
+#include <stdlib.h>
+
+void	ft_list_delete_at(t_list **begin_list, unsigned int index,
+		void (*free_fct)(void *))
+{
+	t_list	*temp;
+
+	if (index >= ft_list_size(*begin_list))
+		return ;
+	if (index == 0)
+	{
+		temp = (*begin_list)->next;
+		ft_delete_elem(*begin_list, free_fct);
+		*begin_list = temp;
+		return ;
+	}
+	temp = NULL;
+	if (index != ft_list_size(*begin_list))
+		temp = ft_list_at(*begin_list, index + 1);
+	ft_delete_elem(ft_list_at(*begin_list, index), free_fct);
+	ft_list_at(*begin_list, index - 1)->next = temp;
+}
