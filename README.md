@@ -8,6 +8,7 @@ This libft is composed of many functions divided in several categories :
 - Sorts
 - Linked lists
 - [ ] Hashtables
+
 And standalone functions of larger size :
 - Get Next Line
 - [ ] Printf
