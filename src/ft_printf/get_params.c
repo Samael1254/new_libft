@@ -6,13 +6,13 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:29:14 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/18 18:13:15 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/11/20 11:43:24 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../chars/ft_chars.h"
-#include "../conversion/conversion.h"
-#include "../memory/memory.h"
+#include "ft_chars.h"
+#include "ft_conversion.h"
+#include "ft_memory.h"
 #include "ft_printf.h"
 
 int	get_precision(const char **format, va_list args, int *flags)
@@ -64,29 +64,15 @@ int	get_width(const char **format, va_list args, int *flags)
 	return (width);
 }
 
-int	get_char_index(const char c, const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] == c)
-			return (i);
-		i++;
-	}
-	return (-1);
-}
-
 int	*get_flags(const char **format)
 {
 	const char	all_flags[5] = "#0- +";
 	int			*flags;
 
 	flags = ft_calloc(5, sizeof(int));
-	while (isincharset(**format, all_flags))
+	while (ft_isincharset(**format, all_flags))
 	{
-		flags[get_char_index(**format, all_flags)] = 1;
+		flags[ft_get_char_index(**format, all_flags)] = 1;
 		(*format)++;
 	}
 	if (flags[MINUS_FLAG])

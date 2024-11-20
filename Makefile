@@ -1,6 +1,6 @@
 NAME = lib/libft.a
 
-SOURCES_DIR = srcs/
+SOURCES_DIR = src/
 
 HEADERS_DIR = includes/
 
@@ -47,27 +47,31 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror -I$(HEADERS_DIR)
 
 $(NAME): $(OBJECTS)
-	@ echo " - object files compiled in build/"
+	@ echo " \033[32m object files compiled in \033[1mbuild/\033[m"
 	@ ar crs $@ $^
-	@ echo " - libft.a compiled in lib/"
+	@ echo " \033[32m \033[1mlibft.a\033[0;32m compiled in \033[1mlib/\033[m"
 
 $(BUILD_DIR)%.o: $(SOURCES_DIR)*/%.c
-	@ echo " ... compiling $(notdir $@)"
+	@ echo " \033[33m... compiling $(notdir $@)\033[m"
 	@ tput cuu1 && tput el
 	@ $(CC) $(CFLAGS) -c $< -o $@
 
-all: $(NAME)
+check_norm:
+	@ echo " \033[33m... checking norminette\033[m"
+	@ norminette > /dev/null 2>&1 && tput cuu1 && tput el && echo " \033[32m norminette valid\033[m" || (tput cuu1 && tput el && echo " \033[31m norminette check failed\033[m"; true)
+
+all: check_norm $(NAME)
 
 clean:
 	@ rm -f $(OBJECTS)
 	@ rm -f $(BUILD_DIR)*.?1
 	@ rm -f $(BUILD_DIR)*.txt
-	@ echo " - object files cleaned"
+	@ echo " \033[32m object files cleaned\033[m"
 
 fclean: clean
 	@ rm -f $(NAME)
-	@ echo " - libft.a cleaned"
+	@ echo " \033[1;32m libft.a\033[0;32m cleaned\033[m"
 
 re: fclean all
 
-.PHONY : clean fclean re all
+.PHONY : clean fclean re all check_norm

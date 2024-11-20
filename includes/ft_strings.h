@@ -6,12 +6,12 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 10:59:57 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/20 10:48:25 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/11/20 11:50:38 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STRINGS_H
-# define STRINGS_H
+#ifndef FT_STRINGS_H
+# define FT_STRINGS_H
 
 # include <stddef.h>
 

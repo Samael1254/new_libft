@@ -6,13 +6,14 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:29:02 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/18 18:17:24 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/11/20 11:39:48 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../math/ft_math.h"
-#include "../strings/ft_strings.h"
+#include "ft_chars.h"
+#include "ft_math.h"
 #include "ft_printf.h"
+#include "ft_strings.h"
 #include <stdlib.h>
 
 int	get_strlen(t_value val, t_arg_params params)
@@ -39,7 +40,7 @@ int	get_ptrlen(t_value val)
 
 int	get_arglen(const char conv, t_value val, t_arg_params params)
 {
-	if (isincharset(conv, "diuxX") && params.precision == 0 && val.i == 0)
+	if (ft_isincharset(conv, "diuxX") && params.precision == 0 && val.i == 0)
 		return (params.flags[PLUS_FLAG]);
 	if (conv == 'c')
 		return (1);

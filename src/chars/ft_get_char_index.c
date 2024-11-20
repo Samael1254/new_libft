@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sorts.h                                         :+:      :+:    :+:   */
+/*   ft_get_char_index.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/20 11:49:58 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/20 11:50:04 by gfulconi         ###   ########.fr       */
+/*   Created: 2024/11/20 11:42:30 by gfulconi          #+#    #+#             */
+/*   Updated: 2024/11/20 11:42:56 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_SORTS_H
-# define FT_SORTS_H
+int	ft_get_char_index(const char c, const char *str)
+{
+	int	i;
 
-void	selection_sort_int(int *tab, int size);
-void	bubble_sort_int(int *tab, int size);
-int		*merge_sort(int *tab, int size);
-
-#endif
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] == c)
+			return (i);
+		i++;
+	}
+	return (-1);
+}
