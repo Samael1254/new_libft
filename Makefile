@@ -7,7 +7,7 @@ HEADERS_DIR = includes/
 BUILD_DIR = build/
 
 SRCS_CHARS := ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isincharset.c \
-			  ft_isprint.c ft_isspace.c ft_tolower.c ft_toupper.c
+			  ft_isprint.c ft_isspace.c ft_tolower.c ft_toupper.c ft_get_char_index.c
 
 SRCS_CONVERSION := ft_atoi_base.c ft_atoi.c ft_check_base_errors.c ft_convert_base.c ft_itoa_base.c \
 				   ft_itoa.c
@@ -46,22 +46,23 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror -I$(HEADERS_DIR)
 
-$(NAME): compile_msg $(OBJECTS)
+$(NAME): $(BUILD_DIR)compile_msg $(OBJECTS)
+	@ touch $(BUILD_DIR)compile_msg
 	@ tput cuu1 && tput el
 	@ echo " \033[32m object files compiled in \033[1mbuild/\033[m"
 	@ ar crs $@ $(OBJECTS)
 	@ echo " \033[32m \033[1mlibft.a\033[0;32m compiled in \033[1mlib/\033[m"
 
-$(BUILD_DIR)%.o: $(SOURCES_DIR)*/%.c
+$(OBJECTS): $(SOURCES)
 	@ echo " \033[33m... compiling $(notdir $@)\033[m"
 	@ tput cuu1 && tput el
 	@ $(CC) $(CFLAGS) -c $< -o $@
 
 check_norm:
 	@ echo " \033[33m... checking norminette\033[m"
-	@ norminette > /dev/null 2>&1 && tput cuu1 && tput el && echo " \033[32m norminette valid\033[m" || (tput cuu1 && tput el && echo " \033[31m norminette check failed\033[m"; true)
+	@ norminette > /dev/null 2>&1 && tput cuu1 && tput el && echo " \033[32m norminette valid\033[m" || (tput cuu1 && tput el && echo " \033[31m norminette check failed\033[m"; true)
 
-compile_msg:
+$(BUILD_DIR)compile_msg:
 	@ echo " \033[33m... building sources\033[m"
 
 all: check_norm $(NAME)
@@ -70,6 +71,7 @@ clean:
 	@ rm -f $(OBJECTS)
 	@ rm -f $(BUILD_DIR)*.?1
 	@ rm -f $(BUILD_DIR)*.txt
+	@ rm -f $(BUILD_DIR)compile_msg
 	@ echo " \033[32m object files cleaned\033[m"
 
 fclean: clean
@@ -78,4 +80,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY : clean fclean re all check_norm compile_msg
+.PHONY : clean fclean re all check_norm
