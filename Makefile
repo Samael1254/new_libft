@@ -46,9 +46,10 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror -I$(HEADERS_DIR)
 
-$(NAME): $(OBJECTS)
+$(NAME): compile_msg $(OBJECTS)
+	@ tput cuu1 && tput el
 	@ echo " \033[32m object files compiled in \033[1mbuild/\033[m"
-	@ ar crs $@ $^
+	@ ar crs $@ $(OBJECTS)
 	@ echo " \033[32m \033[1mlibft.a\033[0;32m compiled in \033[1mlib/\033[m"
 
 $(BUILD_DIR)%.o: $(SOURCES_DIR)*/%.c
@@ -59,6 +60,9 @@ $(BUILD_DIR)%.o: $(SOURCES_DIR)*/%.c
 check_norm:
 	@ echo " \033[33m... checking norminette\033[m"
 	@ norminette > /dev/null 2>&1 && tput cuu1 && tput el && echo " \033[32m norminette valid\033[m" || (tput cuu1 && tput el && echo " \033[31m norminette check failed\033[m"; true)
+
+compile_msg:
+	@ echo " \033[33m... building sources\033[m"
 
 all: check_norm $(NAME)
 
@@ -74,4 +78,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY : clean fclean re all check_norm
+.PHONY : clean fclean re all check_norm compile_msg
