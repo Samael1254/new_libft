@@ -50,12 +50,14 @@ $(NAME): $(BUILD_DIR)compile_msg $(OBJECTS)
 	@ touch $(BUILD_DIR)compile_msg
 	@ tput cuu1 && tput el
 	@ echo " \033[32m object files compiled in \033[1mbuild/\033[m"
+	@ mkdir -p lib
 	@ ar crs $@ $(OBJECTS)
 	@ echo " \033[32m \033[1mlibft.a\033[0;32m compiled in \033[1mlib/\033[m"
 
 $(OBJECTS): $(SOURCES)
 	@ echo " \033[33m... compiling $(notdir $@)\033[m"
 	@ tput cuu1 && tput el
+	@ mkdir -p build
 	@ $(CC) $(CFLAGS) -c $< -o $@
 
 check_norm:
