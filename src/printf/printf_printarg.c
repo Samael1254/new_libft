@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:29:31 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/21 21:53:03 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/11/21 22:16:15 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include "ft_printf.h"
 #include <float.h>
 #include <limits.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 int	printconv(const char conv, t_value val)

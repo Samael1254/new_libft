@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:29:02 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/21 21:54:12 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/11/21 22:14:49 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,14 @@ int	get_ptrlen(t_value val)
 	return (2 + usigned_nbrlen_base((unsigned long)val.p, 16));
 }
 
-int	get_doublelen(const char conv, t_value val, int precision)
+int	get_doublelen(const char conv, t_value val, t_arg_params params)
 {
 	(void)conv;
-	if (precision == -1)
-		precision = 6;
-	return (signed_nbrlen_base(ft_truncate(val.f), 10) + (precision > 0)
-		* (precision + 1));
+	if (params.precision == -1)
+		params.precision = 6;
+	return (signed_nbrlen_base(ft_truncate(val.f), 10) + (params.precision > 0)
+		* (params.precision + 1) + (params.flags[PLUS_FLAG]
+			|| params.flags[SPACE_FLAG]));
 }
 
 int	get_arglen(const char conv, t_value val, t_arg_params params)
@@ -67,7 +68,7 @@ int	get_arglen(const char conv, t_value val, t_arg_params params)
 		return (ft_max(usigned_nbrlen_base(val.u, 16), params.precision) + 2
 			* params.flags[ALT_FLAG] * (val.u > 0));
 	else if (conv == 'f')
-		return (get_doublelen(conv, val, params.precision));
+		return (get_doublelen(conv, val, params));
 	else if (conv == '%')
 		return (1);
 	return (0);

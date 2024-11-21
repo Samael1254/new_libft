@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_params.c                                       :+:      :+:    :+:   */
+/*   printf_params.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:29:14 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/20 11:43:24 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/11/21 22:19:43 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,8 @@ int	get_precision(const char **format, va_list args, int *flags)
 	}
 	if (precision < 0)
 		return (-1);
-	flags[ZERO_FLAG] = 0;
+	if (ft_isincharset(**format, "diuxX"))
+		flags[ZERO_FLAG] = 0;
 	return (precision);
 }
 
