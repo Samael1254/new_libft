@@ -1,46 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils_put_bonus.c                                  :+:      :+:    :+:   */
+/*   utils_putmisc.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 17:02:45 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/18 18:12:16 by gfulconi         ###   ########.fr       */
+/*   Created: 2024/11/06 17:29:26 by gfulconi          #+#    #+#             */
+/*   Updated: 2024/11/20 23:44:31 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../strings/ft_strings.h"
 #include "ft_printf.h"
+#include <stdlib.h>
+#include <unistd.h>
 
-int	ft_putnbr_n(int nb, int n)
+int	ft_putchar(char c)
+{
+	write(1, &c, 1);
+	return (1);
+}
+
+int	ft_putaddr(void *addr)
 {
 	int	len;
 
-	if (nb == INT_MIN)
-		return (ft_putstr("-2147483648"));
-	len = 0;
-	if (nb < 0)
-	{
-		len += ft_putchar('-');
-		nb *= -1;
-	}
-	if (n > 1 || nb >= 10)
-		len += ft_putnbr_n(nb / 10, n - 1);
-	len += ft_putchar(nb % 10 + 48);
+	if (addr == NULL)
+		return (ft_putstr("(nil)"));
+	len = ft_putstr("0x");
+	len += ft_putull_base((unsigned long)addr, "0123456789abcdef");
 	return (len);
 }
 
-int	ft_putui_base_n(unsigned int nb, char *base, int n)
+int	ft_putstr(char *str)
 {
-	unsigned int	base_len;
-	int				len;
+	int	len;
 
-	base_len = ft_strlen(base);
+	if (!str)
+		return (ft_putstr("(null)"));
 	len = 0;
-	if (n > 1 || nb >= base_len)
-		len += ft_putui_base_n(nb / base_len, base, n - 1);
-	len += ft_putchar(base[nb % base_len]);
+	while (*str)
+		len += ft_putchar(*str++);
 	return (len);
 }
 

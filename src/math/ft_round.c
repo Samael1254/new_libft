@@ -1,34 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_to_str_array.c                             :+:      :+:    :+:   */
+/*   ft_round.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/20 15:08:41 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/20 15:08:57 by gfulconi         ###   ########.fr       */
+/*   Created: 2024/11/21 12:20:52 by gfulconi          #+#    #+#             */
+/*   Updated: 2024/11/21 12:22:50 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_list.h"
-#include <stdlib.h>
-
-char	**ft_list_to_str_array(t_list *list)
+long long	ft_round(double nb)
 {
-	int		size;
-	int		i;
-	char	**array;
+	long long	res;
 
-	size = ft_list_size(list);
-	array = malloc(size * sizeof(char *));
-	if (!array)
-		return (NULL);
-	i = 0;
-	while (list)
-	{
-		array[i] = (char *)(list->data);
-		list = list->next;
-		i++;
-	}
-	return (array);
+	res = nb * 10;
+	if (res % 10 >= 5)
+		return (res / 10 + 1);
+	return (res / 10);
 }

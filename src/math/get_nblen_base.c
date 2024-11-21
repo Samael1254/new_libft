@@ -1,9 +1,23 @@
-int	get_intlen_base(int nb, int base_len)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_nblen_base.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/21 11:38:30 by gfulconi          #+#    #+#             */
+/*   Updated: 2024/11/21 11:41:01 by gfulconi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <limits.h>
+
+int	signed_nbrlen_base(long long nb, int base_len)
 {
 	int	len;
 
-	if (nb == -2147483648)
-		return (11);
+	if (nb == LONG_MIN)
+		return (20);
 	if (nb < 0)
 	{
 		len = 2;
@@ -19,7 +33,7 @@ int	get_intlen_base(int nb, int base_len)
 	return (len);
 }
 
-int	get_ullen_base(unsigned long nb, int base_len)
+int	usigned_nbrlen_base(unsigned long long nb, int base_len)
 {
 	int	len;
 

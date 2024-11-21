@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/17 17:06:10 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/20 10:16:31 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/11/21 14:08:48 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_itoa(int nb)
 	int		i;
 	int		digit_count;
 
-	digit_count = get_intlen_base(nb, 10);
+	digit_count = signed_nbrlen_base(nb, 10);
 	result = malloc(sizeof(char) * (digit_count + (nb < 0) + 1));
 	if (result == NULL)
 		return (NULL);

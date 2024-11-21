@@ -22,7 +22,8 @@ SRCS_LIST := ft_create_elem.c ft_delete_elem.c ft_int_array_to_list.c ft_list_at
 			  ft_sorted_list_merge.c ft_str_array_to_list.c ft_swap_elem.c ft_print_int_list.c ft_print_str_list.c
 
 SRCS_MATH := extremums.c ft_abs.c ft_factorial.c ft_fibonnaci.c ft_find_next_prime.c \
-			 ft_isprime.c ft_power.c ft_range.c ft_sqrt.c get_nblen_base.c
+			 ft_isprime.c ft_power.c ft_range.c ft_sqrt.c get_nblen_base.c \
+			 ft_truncate.c ft_round.c
 
 SRCS_MEMORY := ft_bzero.c ft_calloc.c ft_memchr.c ft_memcmp.c ft_memcpy.c \
 			   ft_memmove.c ft_memset.c
@@ -35,10 +36,14 @@ SRCS_STRINGS := ft_split.c ft_str_addchar.c ft_strcat.c ft_strchr.c ft_strcmp.c 
 				ft_strncpy.c ft_strnstr.c ft_strrchr.c ft_strstr.c ft_strtrim.c \
 				ft_substr.c get_char_index.c
 
+SRCS_PRINTF := ft_printf.c printf_arg_attributes.c printf_padding.c printf_params.c printf_printarg.c \
+			   put_misc.c put_nbr.c
+
 SOURCES := $(addprefix $(SOURCES_DIR)chars/, $(SRCS_CHARS)) $(addprefix $(SOURCES_DIR)conversion/, $(SRCS_CONVERSION)) \
 		   $(addprefix $(SOURCES_DIR)get_next_line/, $(SRCS_GET_NEXT_LINE)) $(addprefix $(SOURCES_DIR)lists/, $(SRCS_LIST)) \
 		   $(addprefix $(SOURCES_DIR)math/, $(SRCS_MATH)) $(addprefix $(SOURCES_DIR)memory/, $(SRCS_MEMORY)) \
-		   $(addprefix $(SOURCES_DIR)sorts/, $(SRCS_SORTS)) $(addprefix $(SOURCES_DIR)strings/, $(SRCS_STRINGS))
+		   $(addprefix $(SOURCES_DIR)sorts/, $(SRCS_SORTS)) $(addprefix $(SOURCES_DIR)strings/, $(SRCS_STRINGS)) \
+		   $(addprefix $(SOURCES_DIR)printf/, $(SRCS_PRINTF))
 
 OBJECTS = $(addprefix $(BUILD_DIR), $(notdir $(SOURCES:.c=.o)))
 
@@ -54,7 +59,7 @@ $(NAME): $(BUILD_DIR)compile_msg $(OBJECTS)
 	@ ar crs $@ $(OBJECTS)
 	@ echo " \033[32m \033[1mlibft.a\033[0;32m compiled in \033[1mlib/\033[m"
 
-$(OBJECTS): $(SOURCES)
+$(BUILD_DIR)%.o: $(SOURCES_DIR)*/%.c
 	@ echo " \033[33m... compiling $(notdir $@)\033[m"
 	@ tput cuu1 && tput el
 	@ mkdir -p build
