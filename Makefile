@@ -37,7 +37,7 @@ SRCS_STRINGS := ft_split.c ft_str_addchar.c ft_strcat.c ft_strchr.c ft_strcmp.c 
 				ft_substr.c get_char_index.c
 
 SRCS_PRINTF := ft_printf.c printf_arg_attributes.c printf_padding.c printf_params.c printf_printarg.c \
-			   put_misc.c put_nbr.c
+			   printf_modify_len.c put_misc.c put_nbr.c
 
 SOURCES := $(addprefix $(SOURCES_DIR)chars/, $(SRCS_CHARS)) $(addprefix $(SOURCES_DIR)conversion/, $(SRCS_CONVERSION)) \
 		   $(addprefix $(SOURCES_DIR)get_next_line/, $(SRCS_GET_NEXT_LINE)) $(addprefix $(SOURCES_DIR)lists/, $(SRCS_LIST)) \

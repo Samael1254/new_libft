@@ -6,13 +6,12 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:29:31 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/21 22:16:15 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/11/22 00:49:35 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_chars.h"
 #include "ft_printf.h"
-#include <float.h>
 #include <limits.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -65,8 +64,8 @@ int	printconv_prec(const char conv, t_value val, int precision)
 
 int	print_nb_sign(const char conv, t_value *val, t_arg_params params)
 {
-	if ((ft_isincharset(conv, "di") && val->i != INT_MIN)
-		|| (ft_isincharset(conv, "f") && val->f != DBL_MIN))
+	if ((ft_isincharset(conv, "di") && val->i != LLONG_MIN)
+		|| (ft_isincharset(conv, "f") && val->f != 2.2250738585072014e-308))
 	{
 		if ((ft_isincharset(conv, "di") && val->i < 0) || (ft_isincharset(conv,
 					"f") && val->f < 0))
@@ -94,7 +93,7 @@ int	printarg(const char conv, va_list arg, t_arg_params params)
 	int		arglen;
 	int		len;
 
-	val = get_argval(conv, arg);
+	val = get_argval(conv, arg, params.len_mod);
 	arglen = get_arglen(conv, val, params);
 	len = 0;
 	if (params.flags[ZERO_FLAG] && conv != '%')

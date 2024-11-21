@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:29:07 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/18 18:11:45 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/11/21 22:54:27 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int	ft_printf(const char *format, ...)
 			params.flags = get_flags(&format);
 			params.width = get_width(&format, args, params.flags);
 			params.precision = get_precision(&format, args, params.flags);
+			params.len_mod = get_len_mod(&format);
 			len += printarg(*format, args, params);
 			free(params.flags);
 		}

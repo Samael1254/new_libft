@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:02:32 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/21 22:07:54 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/11/22 00:08:11 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,58 +21,67 @@
 # define PLUS_FLAG 4
 
 # include <stdarg.h>
+# include <stdint.h>
+
+typedef enum e_len_mod
+{
+	none,
+	hh,
+	h,
+	l,
+	ll,
+}				t_len_mod;
 
 typedef union u_value
 {
-	int				i;
-	unsigned int	u;
-	void			*p;
-	double			f;
-}					t_value;
+	intmax_t	i;
+	uintmax_t	u;
+	void		*p;
+	long double	f;
+}				t_value;
 
 typedef struct s_arg_params
 {
-	int				*flags;
-	int				width;
-	int				precision;
-	char			length_mod;
-}					t_arg_params;
+	int			*flags;
+	int			width;
+	int			precision;
+	t_len_mod	len_mod;
+}				t_arg_params;
 
-// PUTDATA
 // utils_putnbr
-int					ft_putnbr(long long nb);
-int					ft_putnbr_n(long long nb, int n);
-int					ft_putull_base_n(unsigned long long nb, char *base, int n);
-int					ft_putull_base(unsigned long long nb, char *base);
+int				ft_putnbr(long long nb);
+int				ft_putnbr_n(long long nb, int n);
+int				ft_putull_base_n(unsigned long long nb, char *base, int n);
+int				ft_putull_base(unsigned long long nb, char *base);
 // utils_putmisc
-int					ft_putchar(char c);
-int					ft_putaddr(void *addr);
-int					ft_putstr(char *str);
-int					ft_putstrn(char *str, int n);
-int					ft_putdouble(double nb, int precision);
+int				ft_putchar(char c);
+int				ft_putaddr(void *addr);
+int				ft_putstr(char *str);
+int				ft_putstrn(char *str, int n);
+int				ft_putdouble(double nb, int precision);
 
 // get params
-int					get_precision(const char **format, va_list args,
-						int *flags);
-int					get_width(const char **format, va_list args, int *flags);
-int					*get_flags(const char **format);
+t_len_mod		get_len_mod(const char **format);
+int				get_precision(const char **format, va_list args, int *flags);
+int				get_width(const char **format, va_list args, int *flags);
+int				*get_flags(const char **format);
 
 // get arg attributes
-t_value				get_argval(const char conv, va_list arg);
-int					get_arglen(const char conv, t_value val,
-						t_arg_params params);
+t_value			get_argval(const char conv, va_list arg, t_len_mod len_mod);
+int				get_arglen(const char conv, t_value val, t_arg_params params);
+void			modify_len(const char conv, t_value *val, t_len_mod len_mod);
 
 // print padding
-int					printpadding(int width, int arglen, char c);
-int					printf_flag_zero(const char conv, t_value *val,
-						t_arg_params params, int arglen);
+int				printpadding(int width, int arglen, char c);
+int				printf_flag_zero(const char conv, t_value *val,
+					t_arg_params params, int arglen);
 
 // printarg
-int					print_nb_sign(const char conv, t_value *val,
-						t_arg_params params);
-int					printarg(const char conv, va_list arg, t_arg_params params);
+int				print_nb_sign(const char conv, t_value *val,
+					t_arg_params params);
+int				printarg(const char conv, va_list arg, t_arg_params params);
 
 // main function
-int					ft_printf(const char *format, ...);
+int				ft_printf(const char *format, ...);
 
 #endif

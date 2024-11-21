@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:29:14 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/21 22:19:43 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/11/22 00:08:20 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,33 @@
 #include "ft_conversion.h"
 #include "ft_memory.h"
 #include "ft_printf.h"
+
+t_len_mod	get_len_mod(const char **format)
+{
+	if (**format == 'h')
+	{
+		(*format)++;
+		if (**format == 'h')
+		{
+			(*format)++;
+			return (hh);
+		}
+		return (h);
+	}
+	else if (**format == 'l')
+	{
+		(*format)++;
+		if (**format == 'l')
+		{
+			(*format)++;
+			return (ll);
+		}
+		return (l);
+	}
+	else if (ft_isincharset(**format, "Lj"))
+		(*format)++;
+	return (none);
+}
 
 int	get_precision(const char **format, va_list args, int *flags)
 {
