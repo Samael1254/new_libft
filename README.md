@@ -11,8 +11,7 @@
 
 **And standalone functions of larger size :**
 - Get Next Line
-- Printf
+- Printf and Dprintf
 
 **Will be added in the future :**
-- New options for printf
-- Dprintf
+- math/ft_sqrt

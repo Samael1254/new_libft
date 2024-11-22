@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 17:02:32 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/22 12:13:18 by gfulconi         ###   ########.fr       */
+/*   Created: 2024/11/22 12:10:09 by gfulconi          #+#    #+#             */
+/*   Updated: 2024/11/22 12:11:18 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_dprintf.h"
 
-int	ft_printf(const char *format, ...);
-int	ft_dprintf(int fd, const char *format, ...);
-
-#endif
+int	ft_printf(const char *format, ...)
+{
+	return (ft_dprintf(1, format));
+}
