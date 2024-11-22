@@ -1,5 +1,16 @@
-#include "hashtable.h"
-#include "utils.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   hashtable_additional.c                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/22 01:01:56 by gfulconi          #+#    #+#             */
+/*   Updated: 2024/11/22 01:01:56 by gfulconi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ft_hashtable.h"
 #include <stdio.h>
 
 unsigned int	ft_ht_length(t_hashtable *ht)

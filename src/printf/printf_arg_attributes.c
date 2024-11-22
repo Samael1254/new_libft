@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:29:02 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/22 00:37:39 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/11/22 00:56:54 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ t_value	get_argval(const char conv, va_list arg, t_len_mod len_mod)
 	else if (conv == 'u' || conv == 'x' || conv == 'X')
 		val.u = va_arg(arg, uintmax_t);
 	else if (conv == 'f')
-		val.f = va_arg(arg, long double);
+		val.f = va_arg(arg, double);
 	else
 		val.p = NULL;
 	modify_len(conv, &val, len_mod);

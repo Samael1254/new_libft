@@ -1,11 +1,16 @@
-static void	swap(int *a, int *b)
-{
-	int	c;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   selection_sort.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/22 01:03:16 by gfulconi          #+#    #+#             */
+/*   Updated: 2024/11/22 01:03:36 by gfulconi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-	c = *a;
-	*a = *b;
-	*b = c;
-}
+#include "ft_sorts.h"
 
 void	selection_sort_int(int *tab, int size)
 {
@@ -24,13 +29,14 @@ void	selection_sort_int(int *tab, int size)
 				min_id = i;
 			i++;
 		}
-		swap(&tab[n], &tab[min_id]);
+		ft_swap_int(&tab[n], &tab[min_id]);
 		n++;
 	}
 }
 
 /*#include <stdio.h>
 #include <stdlib.h>
+
 int	main(int argc, char **argv)
 {
 	int	i;

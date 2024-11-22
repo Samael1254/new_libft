@@ -6,12 +6,12 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/17 17:18:13 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/21 13:55:49 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/11/22 01:05:36 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBITEFT_H
-# define LIBITEFT_H
+#ifndef LIBFT_H
+# define LIBFT_H
 
 # include "ft_chars.h"
 # include "ft_conversion.h"

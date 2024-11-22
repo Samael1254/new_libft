@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 23:00:04 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/22 00:20:43 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/11/22 00:56:43 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,4 @@ void	modify_len(const char conv, t_value *val, t_len_mod len_mod)
 		modify_signed_int_len(val, len_mod);
 	else if (conv == 'u' || conv == 'x' || conv == 'X')
 		modify_unsigned_int_len(val, len_mod);
-	else if (conv == 'f' && len_mod == none)
-		val->f = (double)val->f;
 }

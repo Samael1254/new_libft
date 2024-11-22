@@ -1,22 +1,27 @@
-static void	swap(int *a, int *b)
-{
-	int	c;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   bubble_sort_int.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/22 01:04:45 by gfulconi          #+#    #+#             */
+/*   Updated: 2024/11/22 01:04:45 by gfulconi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-	c = *a;
-	*a = *b;
-	*b = c;
-}
+#include "ft_sorts.h"
 
 void	bubble_sort_int(int *tab, int size)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < size - 1)
 	{
-		if (tab[i] > tab [i + 1])
+		if (tab[i] > tab[i + 1])
 		{
-			swap(&tab[i], &tab[i + 1]);
+			ft_swap_int(&tab[i], &tab[i + 1]);
 			i = 0;
 		}
 		else
@@ -26,6 +31,7 @@ void	bubble_sort_int(int *tab, int size)
 
 /*#include <stdio.h>
 #include <stdlib.h>
+
 int	main(int argc, char **argv)
 {
 	int	i;

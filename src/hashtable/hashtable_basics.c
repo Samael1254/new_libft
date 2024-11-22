@@ -1,7 +1,17 @@
-#include "../strings/strings.h"
-#include "hashtable.h"
-#include "utils.h"
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   hashtable_basics.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/22 01:01:41 by gfulconi          #+#    #+#             */
+/*   Updated: 2024/11/22 01:01:48 by gfulconi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ft_hashtable.h"
+#include "ft_strings.h"
 #include <stdlib.h>
 
 t_hashtable	*ft_ht_create(void)

@@ -6,11 +6,9 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 12:13:04 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/21 12:18:33 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/11/22 01:06:19 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <float.h>
 
 long long	ft_truncate(double nb)
 {

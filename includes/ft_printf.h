@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:02:32 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/22 00:08:11 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/11/22 00:57:21 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ typedef union u_value
 	intmax_t	i;
 	uintmax_t	u;
 	void		*p;
-	long double	f;
+	double		f;
 }				t_value;
 
 typedef struct s_arg_params

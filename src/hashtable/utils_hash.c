@@ -1,6 +1,16 @@
-#include "hashtable.h"
-#include "hashtable_stucts.h"
-#include "utils.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils_hash.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/22 01:01:36 by gfulconi          #+#    #+#             */
+/*   Updated: 2024/11/22 01:01:40 by gfulconi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ft_hashtable.h"
 #include <stdio.h>
 #include <stdlib.h>
 
