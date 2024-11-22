@@ -6,11 +6,11 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 17:32:37 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/20 10:19:57 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/11/22 16:36:47 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_utils.h"
 #include <stdlib.h>
 
 char	*get_next_line(int fd)

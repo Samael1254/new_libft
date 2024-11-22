@@ -6,12 +6,12 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 17:33:06 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/20 10:19:35 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/11/22 16:39:47 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_strings.h"
-#include "get_next_line.h"
+#include "get_next_line_utils.h"
 #include <unistd.h>
 
 void	update_buf(t_fd_data *fd_log, int fd)

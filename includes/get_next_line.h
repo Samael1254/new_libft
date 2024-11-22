@@ -6,27 +6,14 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 17:32:48 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/20 11:48:59 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/11/22 16:37:40 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 42
-# endif
-
-typedef struct s_fd_data
-{
-	char	buf[BUFFER_SIZE];
-	int		i;
-	int		bytes_read;
-}			t_fd_data;
-
-char		*get_next_line(int fd);
-
-void		update_buf(t_fd_data *fd_log, int fd);
-void		get_next_char(char **line, t_fd_data *fd_log, int fd);
+// Returns the next line (including the \n) from a given file descriptor
+char	*get_next_line(int fd);
 
 #endif

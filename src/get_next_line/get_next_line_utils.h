@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_int_list.c                                :+:      :+:    :+:   */
+/*   get_next_line_utils.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/20 15:08:44 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/22 15:15:00 by gfulconi         ###   ########.fr       */
+/*   Created: 2024/11/15 17:32:48 by gfulconi          #+#    #+#             */
+/*   Updated: 2024/11/22 16:36:22 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_list.h"
-#include "ft_printf.h"
-#include <unistd.h>
+#ifndef GET_NEXT_LINE_UTILS_H
+# define GET_NEXT_LINE_UTILS_H
 
-void	print_int_list(t_list *begin_list, char *sep)
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
+
+typedef struct s_fd_data
 {
-	while (begin_list)
-	{
-		ft_printf("%d", *(int *)(begin_list->data));
-		if (begin_list->next)
-			ft_printf("%s", sep);
-		write(1, ", ", 2);
-		begin_list = begin_list->next;
-	}
-}
+	char	buf[BUFFER_SIZE];
+	int		i;
+	int		bytes_read;
+}			t_fd_data;
+
+void		update_buf(t_fd_data *fd_log, int fd);
+void		get_next_char(char **line, t_fd_data *fd_log, int fd);
+
+#endif
