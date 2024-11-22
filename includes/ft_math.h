@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:50:28 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/22 15:57:01 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/11/22 17:13:24 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@
 // Calculates the term index of the Fibonnaci sequence
 int			ft_fibonacci(int index);
 // Calculates the power of an integer by another
-int			ft_power(int nb, int power);
+int			ft_power(int nb, unsigned int power);
+// Calculates the integer square root of an integer (-1 if it does not exist)
+long		ft_sqrt(unsigned long nb);
 // Calculates the factorial of an integer
 int			ft_factorial(int nb);
 // Checks if a number is prime

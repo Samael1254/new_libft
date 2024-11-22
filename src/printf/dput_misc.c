@@ -1,58 +1,58 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils_putmisc.c                                    :+:      :+:    :+:   */
+/*   dput_misc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:29:26 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/20 23:44:31 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/11/22 12:04:25 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "ft_printf_utils.h"
 #include <stdlib.h>
 #include <unistd.h>
 
-int	ft_putchar(char c)
+int	ft_putchar_fd(char c, int fd)
 {
-	write(1, &c, 1);
+	write(fd, &c, 1);
 	return (1);
 }
 
-int	ft_putaddr(void *addr)
+int	ft_putaddr_fd(void *addr, int fd)
 {
 	int	len;
 
 	if (addr == NULL)
-		return (ft_putstr("(nil)"));
-	len = ft_putstr("0x");
-	len += ft_putull_base((unsigned long)addr, "0123456789abcdef");
+		return (ft_putstr_fd("(nil)", fd));
+	len = ft_putstr_fd("0x", fd);
+	len += ft_putull_base_fd((unsigned long)addr, "0123456789abcdef", fd);
 	return (len);
 }
 
-int	ft_putstr(char *str)
+int	ft_putstr_fd(char *str, int fd)
 {
 	int	len;
 
 	if (!str)
-		return (ft_putstr("(null)"));
+		return (ft_putstr_fd("(null)", fd));
 	len = 0;
 	while (*str)
-		len += ft_putchar(*str++);
+		len += ft_putchar_fd(*str++, fd);
 	return (len);
 }
 
-int	ft_putstrn(char *str, int n)
+int	ft_putstrn_fd(char *str, int n, int fd)
 {
 	int	i;
 
 	if (!str)
-		return (ft_putstr("(null)"));
+		return (ft_putstr_fd("(null)", fd));
 	i = 0;
 	while (str[i] && i < n)
 	{
-		ft_putchar(str[i]);
+		ft_putchar_fd(str[i], fd);
 		i++;
 	}
 	return (i);

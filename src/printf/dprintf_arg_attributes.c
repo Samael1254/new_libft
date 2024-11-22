@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf_arg_attributes.c                            :+:      :+:    :+:   */
+/*   dprintf_arg_attributes.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:29:02 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/22 00:56:54 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/11/22 11:43:40 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_chars.h"
+#include "ft_printf_utils.h"
 #include "ft_math.h"
-#include "ft_printf.h"
 #include "ft_strings.h"
 #include <stdint.h>
 #include <stdlib.h>

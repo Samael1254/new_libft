@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dprintf.c                                       :+:      :+:    :+:   */
+/*   ft_vdprintf.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:29:07 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/22 11:53:14 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/11/22 17:54:44 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_dprintf.h"
+#include "ft_printf_utils.h"
 #include <stdlib.h>
 
-int	ft_dprintf(int fd, const char *format, ...)
+int	ft_vdprintf(int fd, const char *format, va_list args)
 {
-	va_list			args;
 	int				len;
 	t_arg_params	params;
 
 	len = 0;
-	va_start(args, format);
 	while (*format)
 	{
 		if (*format == '%')

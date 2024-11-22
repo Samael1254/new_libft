@@ -5,38 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 17:29:07 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/21 22:54:27 by gfulconi         ###   ########.fr       */
+/*   Created: 2024/11/22 12:10:09 by gfulconi          #+#    #+#             */
+/*   Updated: 2024/11/22 17:56:53 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-#include <stdlib.h>
+#include "ft_printf_utils.h"
+#include <stdarg.h>
 
 int	ft_printf(const char *format, ...)
 {
-	va_list			args;
-	int				len;
-	t_arg_params	params;
+	va_list	args;
 
-	len = 0;
 	va_start(args, format);
-	while (*format)
-	{
-		if (*format == '%')
-		{
-			format++;
-			params.flags = get_flags(&format);
-			params.width = get_width(&format, args, params.flags);
-			params.precision = get_precision(&format, args, params.flags);
-			params.len_mod = get_len_mod(&format);
-			len += printarg(*format, args, params);
-			free(params.flags);
-		}
-		else
-			len += ft_putchar(*format);
-		format++;
-	}
+	return (ft_vdprintf(1, format, args));
 	va_end(args);
-	return (len);
 }

@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:02:32 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/22 12:16:18 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/11/22 17:55:36 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,6 @@ int				print_nb_sign(const char conv, t_value *val,
 					t_arg_params params);
 int				printarg(const char conv, va_list arg, t_arg_params params);
 
-// main function
-int				ft_dprintf(int fd, const char *format, ...);
+int				ft_vdprintf(int fd, const char *format, va_list args);
 
 #endif
