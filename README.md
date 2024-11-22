@@ -14,4 +14,5 @@
 - Printf and Dprintf
 
 **Will be added in the future :**
-- math/ft_sqrt
+- math/trigonometry
+- more hashtable functions
