@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:50:28 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/22 17:13:24 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/11/22 20:58:22 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,10 @@ int			usigned_nbrlen_base(unsigned long long nb, int base_len);
 long long	ft_truncate(double nb);
 // Converts a double by rounding it to the closest integer
 long long	ft_round(double nb);
+// Calculates the power of a double by a signed integer
+double		ft_powerf(double nb, int power);
+// Returns the exponent of a double when written in scientific notation
+int			ft_get_exponent(double nb);
 
 // TODO
 // Trigonomerty

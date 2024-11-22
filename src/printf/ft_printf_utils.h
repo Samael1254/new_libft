@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dprintf.h                                       :+:      :+:    :+:   */
+/*   ft_printf_utils.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:02:32 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/22 17:55:36 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/11/22 21:42:02 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,18 +49,23 @@ typedef struct s_arg_params
 	int			fd;
 }				t_arg_params;
 
-// utils_putnbr
+// utils_putint
 int				ft_putnbr_fd(long long nb, int fd);
 int				ft_putnbr_n_fd(long long nb, int n, int fd);
 int				ft_putull_base_n_fd(unsigned long long nb, char *base, int n,
 					int fd);
 int				ft_putull_base_fd(unsigned long long nb, char *base, int fd);
+
+// utils_putdouble
+int				ft_putdouble_fd(double nb, int precision, int fd);
+int				ft_putscient_fd(double nb, int precision, const char conv,
+					int fd);
+
 // utils_putmisc
 int				ft_putchar_fd(char c, int fd);
 int				ft_putaddr_fd(void *addr, int fd);
 int				ft_putstr_fd(char *str, int fd);
 int				ft_putstrn_fd(char *str, int n, int fd);
-int				ft_putdouble_fd(double nb, int precision, int fd);
 
 // get params
 t_len_mod		get_len_mod(const char **format);

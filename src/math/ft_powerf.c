@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_power.c                                         :+:      :+:    :+:   */
+/*   ft_powerf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/22 01:07:09 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/22 20:53:12 by gfulconi         ###   ########.fr       */
+/*   Created: 2024/11/22 20:53:39 by gfulconi          #+#    #+#             */
+/*   Updated: 2024/11/22 21:03:30 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_power(int nb, unsigned int power)
+#include "ft_math.h"
+
+double	ft_powerf(double nb, int power)
 {
-	unsigned int	i;
-	int				result;
+	int	i;
+	int	result;
 
 	i = 0;
 	result = 1;
-	while (i < power)
+	while (i < ft_abs(power))
 	{
 		result *= nb;
 		i++;
 	}
+	if (power < 0 && result != 0)
+		return (1.0 / result);
 	return (result);
 }

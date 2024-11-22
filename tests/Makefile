@@ -1,5 +1,7 @@
 NAME = test
 
+LIBFT = ../lib/libft.a
+
 HEADERS_DIR = ../includes/
 
 CC = gcc
@@ -9,9 +11,13 @@ CFLAGS = -I$(HEADERS_DIR) -lft -L../lib/
 SOURCES = test.c
 
 $(NAME): $(SOURCES)
+	@ make -s -C ../
 	$(CC) $(SOURCES) $(CFLAGS) -o $(NAME)
 
-all: $(NAME)
+run:
+	@ ./test
+
+all: $(NAME) run
 
 clean:
 	rm -f $(NAME)

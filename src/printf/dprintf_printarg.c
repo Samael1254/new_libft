@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:29:31 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/22 11:58:04 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/11/22 21:45:41 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ int	printconv(const char conv, t_value val, int fd)
 		return (ft_putull_base_fd(val.u, "0123456789ABCDEF", fd));
 	else if (conv == 'f')
 		return (ft_putdouble_fd(val.f, 6, fd));
+	else if (conv == 'e' || conv == 'E')
+		return (ft_putscient_fd(val.f, 6, conv, fd));
 	return (0);
 }
 
@@ -59,20 +61,22 @@ int	printconv_prec(const char conv, t_value val, int precision, int fd)
 		return (ft_putull_base_n_fd(val.u, "0123456789ABCDEF", precision, fd));
 	else if (conv == 'f')
 		return (ft_putdouble_fd(val.f, precision, fd));
+	else if (conv == 'e' || conv == 'E')
+		return (ft_putscient_fd(val.f, precision, conv, fd));
 	return (0);
 }
 
 int	print_nb_sign(const char conv, t_value *val, t_arg_params params)
 {
 	if ((ft_isincharset(conv, "di") && val->i != LLONG_MIN)
-		|| (ft_isincharset(conv, "f") && val->f != 2.2250738585072014e-308))
+		|| (ft_isincharset(conv, "feE") && val->f != 2.2250738585072014e-308))
 	{
 		if ((ft_isincharset(conv, "di") && val->i < 0) || (ft_isincharset(conv,
-					"f") && val->f < 0))
+					"feE") && val->f < 0))
 		{
 			if (ft_isincharset(conv, "di"))
 				val->i *= -1;
-			if (ft_isincharset(conv, "f"))
+			if (ft_isincharset(conv, "feE"))
 				val->f *= -1;
 			return (ft_putchar_fd('-', params.fd));
 		}
@@ -105,7 +109,7 @@ int	printarg(const char conv, va_list arg, t_arg_params params)
 	}
 	if (params.flags[MINUS_FLAG] && conv != '%')
 		len += print_nb_sign(conv, &val, params);
-	if (params.precision > -1 && ft_isincharset(conv, "sdiuxXf"))
+	if (params.precision > -1 && ft_isincharset(conv, "sdiuxXfeE"))
 		len += printconv_prec(conv, val, params.precision, params.fd);
 	else
 		len += printconv(conv, val, params.fd);

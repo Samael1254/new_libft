@@ -23,7 +23,7 @@ SRCS_LIST := ft_create_elem.c ft_delete_elem.c ft_int_array_to_list.c ft_list_at
 
 SRCS_MATH := extremums.c ft_abs.c ft_factorial.c ft_fibonnaci.c ft_find_next_prime.c \
 			 ft_isprime.c ft_power.c ft_range.c ft_sqrt.c get_nblen_base.c \
-			 ft_truncate.c ft_round.c
+			 ft_truncate.c ft_round.c ft_get_exponent.c ft_powerf.c
 
 SRCS_MEMORY := ft_bzero.c ft_calloc.c ft_memchr.c ft_memcmp.c ft_memcpy.c \
 			   ft_memmove.c ft_memset.c
@@ -37,7 +37,7 @@ SRCS_STRINGS := ft_split.c ft_str_addchar.c ft_strcat.c ft_strchr.c ft_strcmp.c 
 				ft_substr.c get_char_index.c
 
 SRCS_PRINTF := ft_printf.c ft_dprintf.c ft_vdprintf.c dprintf_arg_attributes.c dprintf_padding.c dprintf_params.c \
-			   dprintf_printarg.c dprintf_modify_len.c dput_misc.c dput_nbr.c
+			   dprintf_printarg.c dprintf_modify_len.c dput_misc.c dput_int.c dput_double.c
 
 SOURCES := $(addprefix $(SOURCES_DIR)chars/, $(SRCS_CHARS)) $(addprefix $(SOURCES_DIR)conversion/, $(SRCS_CONVERSION)) \
 		   $(addprefix $(SOURCES_DIR)get_next_line/, $(SRCS_GET_NEXT_LINE)) $(addprefix $(SOURCES_DIR)lists/, $(SRCS_LIST)) \

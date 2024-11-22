@@ -6,13 +6,13 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:29:02 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/22 11:43:40 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/11/22 22:10:56 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_chars.h"
-#include "ft_printf_utils.h"
 #include "ft_math.h"
+#include "ft_printf_utils.h"
 #include "ft_strings.h"
 #include <stdint.h>
 #include <stdlib.h>
@@ -41,12 +41,17 @@ int	get_ptrlen(t_value val)
 
 int	get_doublelen(const char conv, t_value val, t_arg_params params)
 {
-	(void)conv;
 	if (params.precision == -1)
 		params.precision = 6;
-	return (signed_nbrlen_base(ft_truncate(val.f), 10) + (params.precision > 0)
-		* (params.precision + 1) + (params.flags[PLUS_FLAG]
-			|| params.flags[SPACE_FLAG]));
+	if (conv == 'f')
+	{
+		return (signed_nbrlen_base(ft_truncate(val.f), 10)
+			+ (params.precision > 0) * (params.precision + 1)
+			+ (params.flags[PLUS_FLAG] || params.flags[SPACE_FLAG]));
+	}
+	return ((val.f < 0 || params.flags[PLUS_FLAG] || params.flags[SPACE_FLAG])
+		+ 1 + (params.precision > 0) * (params.precision + 1) + 2 + ft_max(2,
+			usigned_nbrlen_base(ft_abs(ft_get_exponent(val.f)), 10)));
 }
 
 int	get_arglen(const char conv, t_value val, t_arg_params params)
@@ -68,7 +73,7 @@ int	get_arglen(const char conv, t_value val, t_arg_params params)
 	else if (conv == 'x' || conv == 'X')
 		return (ft_max(usigned_nbrlen_base(val.u, 16), params.precision) + 2
 			* params.flags[ALT_FLAG] * (val.u > 0));
-	else if (conv == 'f')
+	else if (ft_isincharset(conv, "feE"))
 		return (get_doublelen(conv, val, params));
 	else if (conv == '%')
 		return (1);
@@ -85,7 +90,7 @@ t_value	get_argval(const char conv, va_list arg, t_len_mod len_mod)
 		val.p = va_arg(arg, void *);
 	else if (conv == 'u' || conv == 'x' || conv == 'X')
 		val.u = va_arg(arg, uintmax_t);
-	else if (conv == 'f')
+	else if (ft_isincharset(conv, "feE"))
 		val.f = va_arg(arg, double);
 	else
 		val.p = NULL;

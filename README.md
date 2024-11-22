@@ -14,5 +14,9 @@
 - Printf and Dprintf
 
 **Will be added in the future :**
-- math/trigonometry
 - more hashtable functions
+- F, g, G, a, A conversions for printf in that order
+
+**Known issues :**
+- The hashtable resize function segfaults
+- In printf, some double parameters appear badly rounded

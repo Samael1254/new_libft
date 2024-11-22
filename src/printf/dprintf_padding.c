@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 13:20:57 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/22 11:56:10 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/11/22 22:01:34 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	printf_flag_zero(const char conv, t_value *val, t_arg_params params,
 	int	len;
 
 	len = 0;
-	if (ft_isincharset(conv, "diuxXf"))
+	if (ft_isincharset(conv, "diuxXfeE"))
 	{
 		len += print_nb_sign(conv, val, params);
 		len += printpadding(params, arglen, '0');

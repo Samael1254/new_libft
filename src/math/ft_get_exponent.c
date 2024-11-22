@@ -1,26 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_power.c                                         :+:      :+:    :+:   */
+/*   ft_get_exponent.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/22 01:07:09 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/22 20:53:12 by gfulconi         ###   ########.fr       */
+/*   Created: 2024/11/22 18:29:32 by gfulconi          #+#    #+#             */
+/*   Updated: 2024/11/22 22:12:58 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_power(int nb, unsigned int power)
+int	ft_get_exponent(double nb)
 {
-	unsigned int	i;
-	int				result;
+	int	a;
 
-	i = 0;
-	result = 1;
-	while (i < power)
+	a = 0;
+	if (nb == 0)
+		return (0);
+	if (nb < 0)
+		nb *= -1;
+	while (nb >= 10)
 	{
-		result *= nb;
-		i++;
+		a++;
+		nb = nb / 10;
 	}
-	return (result);
+	while (nb < 1)
+	{
+		a--;
+		nb = nb * 10;
+	}
+	return (a);
 }
