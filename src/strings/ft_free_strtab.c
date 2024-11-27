@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_hashtable_utils.h                               :+:      :+:    :+:   */
+/*   ft_free_strtab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/20 11:47:46 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/27 17:45:09 by gfulconi         ###   ########.fr       */
+/*   Created: 2024/11/26 14:35:44 by gfulconi          #+#    #+#             */
+/*   Updated: 2024/11/26 14:39:13 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_HASHTABLE_UTILS_H
-# define FT_HASHTABLE_UTILS_H
+#include <stdlib.h>
 
-# define INITIAL_SIZE 43
+void	ft_free_strtab(char **tab)
+{
+	int	i;
 
-# include "ft_hashtable.h"
-
-// utils
-unsigned int	hash_function(const char *key);
-void			linear_probing(t_hashtable *ht, unsigned int *i,
-					const char *key);
-t_hashtable		*ft_ht_resize(t_hashtable *ht);
-t_hashtable		*ft_ht_create_advanced(unsigned int size, unsigned int load);
-
-#endif
+	i = 0;
+	while (tab[i])
+		free(tab[i++]);
+	free(tab);
+}

@@ -34,16 +34,18 @@ SRCS_STRINGS := ft_split.c ft_str_addchar.c ft_strcat.c ft_strchr.c ft_strcmp.c 
 				ft_strcpy.c ft_strdup.c ft_str_is_number.c ft_striteri.c ft_strjoin.c \
 				ft_strjoin_tab.c ft_strlen.c ft_strmapi.c ft_strncat.c ft_strncmp.c \
 				ft_strncpy.c ft_strnstr.c ft_strrchr.c ft_strstr.c ft_strtrim.c \
-				ft_substr.c get_char_index.c
+				ft_substr.c get_char_index.c ft_free_strtab.c
 
 SRCS_PRINTF := ft_printf.c ft_dprintf.c ft_vdprintf.c dprintf_arg_attributes.c dprintf_padding.c dprintf_params.c \
 			   dprintf_printarg.c dprintf_modify_len.c dput_misc.c dput_int.c dput_double.c
+
+SRCS_HASHTABLE := hashtable_basics.c hashtable_utils.c hashtable_additional.c hashtable_additional_2.c
 
 SOURCES := $(addprefix $(SOURCES_DIR)chars/, $(SRCS_CHARS)) $(addprefix $(SOURCES_DIR)conversion/, $(SRCS_CONVERSION)) \
 		   $(addprefix $(SOURCES_DIR)get_next_line/, $(SRCS_GET_NEXT_LINE)) $(addprefix $(SOURCES_DIR)lists/, $(SRCS_LIST)) \
 		   $(addprefix $(SOURCES_DIR)math/, $(SRCS_MATH)) $(addprefix $(SOURCES_DIR)memory/, $(SRCS_MEMORY)) \
 		   $(addprefix $(SOURCES_DIR)sorts/, $(SRCS_SORTS)) $(addprefix $(SOURCES_DIR)strings/, $(SRCS_STRINGS)) \
-		   $(addprefix $(SOURCES_DIR)printf/, $(SRCS_PRINTF))
+		   $(addprefix $(SOURCES_DIR)printf/, $(SRCS_PRINTF)) $(addprefix $(SOURCES_DIR)hashtable/, $(SRCS_HASHTABLE))
 
 OBJECTS = $(addprefix $(BUILD_DIR), $(notdir $(SOURCES:.c=.o)))
 

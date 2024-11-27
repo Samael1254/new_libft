@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:02:32 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/22 21:42:02 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/11/26 14:34:28 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 # include <stdarg.h>
 # include <stdint.h>
 
+// Enum holding the length modifier of a printed argument
 typedef enum e_len_mod
 {
 	none,
@@ -32,6 +33,7 @@ typedef enum e_len_mod
 	ll,
 }				t_len_mod;
 
+// Union holding the value of a printed argument
 typedef union u_value
 {
 	intmax_t	i;
@@ -40,6 +42,7 @@ typedef union u_value
 	double		f;
 }				t_value;
 
+// Structure holding the parameters of a printed argument
 typedef struct s_arg_params
 {
 	int			*flags;

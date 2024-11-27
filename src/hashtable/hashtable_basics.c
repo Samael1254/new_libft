@@ -6,17 +6,20 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 01:01:41 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/22 01:01:48 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/11/27 17:50:43 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_hashtable.h"
+#include "ft_hashtable_utils.h"
 #include "ft_strings.h"
+#include <limits.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 t_hashtable	*ft_ht_create(void)
 {
-	return (ft_ht_create_advanced(INITIAL_SIZE, 0));
+	return (ft_ht_create_advanced(7, 0));
 }
 
 void	ft_ht_destroy(t_hashtable *ht)
@@ -39,8 +42,7 @@ void	*ft_ht_get(t_hashtable *ht, const char *key)
 	unsigned int	i;
 
 	i = hash_function(key) % ht->size;
-	while (ht->table[i].key && ft_strcmp(key, ht->table[i].key) != 0)
-		i++;
+	linear_probing(ht, &i, key);
 	if (!ht->table[i].key)
 		return (NULL);
 	return (ht->table[i].data);
@@ -50,16 +52,20 @@ char	*ft_ht_set(t_hashtable *ht, const char *key, void *data)
 {
 	unsigned int	i;
 
-	if (ht->load > ht->size / 2)
-		ft_ht_resize(&ht);
+	if (ht->load > ht->size / 2 && ht->size <= INT_MAX)
+	{
+		if (!ft_ht_resize(ht))
+			return (NULL);
+	}
 	i = hash_function(key) % ht->size;
-	while (ht->table[i].key && ft_strcmp(key, ht->table[i].key) != 0)
-		i++;
+	linear_probing(ht, &i, key);
 	if (ht->table[i].key)
 		ht->table[i].data = data;
 	else
 	{
 		ht->table[i].key = ft_strdup(key);
+		if (!ht->table[i].key)
+			return (NULL);
 		ht->table[i].data = data;
 		ht->load += 1;
 	}
@@ -71,8 +77,7 @@ void	ft_ht_remove(t_hashtable *ht, const char *key)
 	unsigned int	i;
 
 	i = hash_function(key) % ht->size;
-	while (ht->table[i].key && ft_strcmp(key, ht->table[i].key) != 0)
-		i++;
+	linear_probing(ht, &i, key);
 	if (ht->table[i].key)
 	{
 		free(ht->table[i].key);

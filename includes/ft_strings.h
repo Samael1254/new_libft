@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 10:59:57 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/22 16:13:13 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/11/26 14:39:32 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,5 +78,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int		ft_str_is_number(const char *str);
 
 int		get_char_index(const char c, const char *str);
+
+// Frees a table of strings
+void	ft_free_strtab(char **tab);
 
 #endif

@@ -6,12 +6,15 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 01:01:56 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/22 01:01:56 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/11/27 17:08:44 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_hashtable.h"
+#include "ft_hashtable_utils.h"
+#include "ft_strings.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 unsigned int	ft_ht_length(t_hashtable *ht)
 {
@@ -49,4 +52,39 @@ void	ft_ht_print_debug(t_hashtable *ht, char type)
 		}
 		i++;
 	}
+}
+
+char	**ft_ht_keys(t_hashtable *ht)
+{
+	unsigned int	i;
+	unsigned int	j;
+	char			**keys;
+
+	keys = malloc(sizeof(char *) * (ht->load + 1));
+	if (!keys)
+		return (NULL);
+	i = 0;
+	j = 0;
+	while (i < ht->size)
+	{
+		if (ht->table[i].key)
+		{
+			keys[j++] = ft_strdup(ht->table[i].key);
+			if (!keys[j - 1])
+				return (ft_free_strtab(keys), NULL);
+		}
+		i++;
+	}
+	return (keys);
+}
+
+int	ft_ht_does_contain(t_hashtable *ht, char *key)
+{
+	unsigned int	i;
+
+	i = hash_function(key) % ht->size;
+	linear_probing(ht, &i, key);
+	if (!ht->table[i].key)
+		return (0);
+	return (1);
 }

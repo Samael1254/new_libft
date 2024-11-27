@@ -6,7 +6,7 @@
 /*   By: gfulconi <gfulconi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 13:57:11 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/20 10:47:16 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/11/26 14:39:04 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,16 +28,6 @@ static int	count_words(char *s, char c)
 			s++;
 	}
 	return (n);
-}
-
-static void	free_tab(char **tab, int i_max)
-{
-	int	i;
-
-	i = 0;
-	while (i < i_max)
-		free(tab[i++]);
-	free(tab);
 }
 
 static int	next_word_len(char const *s, char c)
@@ -69,7 +59,7 @@ char	**ft_split(char const *s, char c)
 		s_len = next_word_len(s, c);
 		tab[i] = malloc(sizeof(char) * (s_len + 1));
 		if (!tab[i])
-			return (free_tab(tab, i), NULL);
+			return (ft_free_strtab(tab), NULL);
 		ft_strncpy(tab[i++], s, s_len);
 		s += s_len;
 	}

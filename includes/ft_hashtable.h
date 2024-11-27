@@ -6,14 +6,12 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:47:46 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/22 16:56:14 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/11/27 17:14:48 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_HASHTABLE_H
 # define FT_HASHTABLE_H
-
-# define INITIAL_SIZE 7
 
 // A key/data couple from a hashtable
 typedef struct s_ht_item
@@ -48,9 +46,15 @@ void					ft_ht_remove(t_hashtable *ht, const char *key);
 
 // Returns the number of values inside the table
 unsigned int			ft_ht_length(t_hashtable *ht);
-// Frees the data sorted in the hashtable
+// Frees the data stored in the hashtable
 void					ft_ht_clear_data(t_hashtable *ht, void (*del)(void *));
 // Print the values inside the table for debugging
 void					ft_ht_print_debug(t_hashtable *ht, char type);
+// Returns an array containing the keys of the hashtable
+char					**ft_ht_keys(t_hashtable *ht);
+// Returns the load factor of the hashtable
+float					ft_ht_load_factor(t_hashtable *ht);
+// Checks if the hashtable contains the given key
+int						ft_ht_does_contain(t_hashtable *ht, char *key);
 
 #endif
