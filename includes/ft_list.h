@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:49:08 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/04 17:02:54 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/12/04 20:12:52 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,8 @@ unsigned int		ft_list_size(t_list *begin_list);
 // Checks if the list is sorted
 int					ft_list_is_sorted(t_list *begin_list, int (*cmp)(void *,
 							void *));
+// Returns the list element containing the smallest int
+t_list				*ft_int_list_min(t_list *begin_list);
 
 // Navigation
 
