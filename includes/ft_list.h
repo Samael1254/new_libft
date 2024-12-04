@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:49:08 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/02 17:44:13 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/12/04 16:59:24 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ t_list				*ft_create_elem(void *data);
 // Creates a copy of a list
 t_list				*ft_list_cpy(t_list *src);
 // Creates a list by applying a given function to every element of a given list
-t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
+t_list				*ft_list_map(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
 
 // Insertion
@@ -116,10 +116,10 @@ char				**ft_list_to_str_array(t_list *list);
 // Display
 
 // Prints a list of integers separated by a given string
-void				print_int_list(t_list *begin_list, char *sep);
+void				ft_print_int_list(t_list *begin_list, char *sep);
 // Prints a list of strings separated by a given string
-void				print_strs_list(t_list *begin_list, char *sep);
+void				ft_print_strs_list(t_list *begin_list, char *sep);
 // Reverse prints a list of integers separated by a given string
-void				print_int_list_reverse(t_list *begin_list, char sep);
+void				ft_print_int_list_reverse(t_list *begin_list, char sep);
 
 #endif

@@ -6,11 +6,16 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 01:04:42 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/22 01:04:42 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/12/03 11:53:47 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+
+static void	merge_one(int *merged, int *section, int section_id, int other_id)
+{
+	merged[section_id + other_id] = section[section_id];
+}
 
 static int	*merge_halves(int *left, int *right, int size)
 {
@@ -24,26 +29,14 @@ static int	*merge_halves(int *left, int *right, int size)
 	while (i < size / 2 && j < size - size / 2)
 	{
 		if (left[i] < right[j])
-		{
-			merged[i + j] = left[i];
-			i++;
-		}
+			merge_one(merged, left, i++, j);
 		else
-		{
-			merged[i + j] = right[j];
-			j++;
-		}
+			merge_one(merged, right, j++, i);
 	}
 	while (i < size / 2)
-	{
-		merged[i + j] = left[i];
-		i++;
-	}
+		merge_one(merged, left, i++, j);
 	while (j < size - size / 2)
-	{
-		merged[i + j] = right[j];
-		j++;
-	}
+		merge_one(merged, right, j++, i);
 	return (merged);
 }
 
