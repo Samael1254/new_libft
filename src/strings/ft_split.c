@@ -6,29 +6,12 @@
 /*   By: gfulconi <gfulconi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 13:57:11 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/26 14:39:04 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/12/05 16:12:55 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_strings.h"
 #include <stdlib.h>
-
-static int	count_words(char *s, char c)
-{
-	int	n;
-
-	n = 0;
-	while (*s)
-	{
-		while (*s == c && *s)
-			s++;
-		if (*s)
-			n++;
-		while (*s != c && *s)
-			s++;
-	}
-	return (n);
-}
 
 static int	next_word_len(char const *s, char c)
 {
@@ -47,7 +30,7 @@ char	**ft_split(char const *s, char c)
 	char	**tab;
 	int		size;
 
-	size = count_words((char *)s, c);
+	size = ft_count_words((char *)s, c);
 	tab = malloc(sizeof(char *) * (size + 1));
 	if (!tab)
 		return (NULL);

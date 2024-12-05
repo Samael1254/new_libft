@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 10:59:57 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/26 14:39:32 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/12/05 16:12:15 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,10 @@ char	*ft_strtrim(char const *s1, char const *set);
 
 // Creates a tab of strings from splitting a string at every separator
 char	**ft_split(char const *s, char c);
+// Counts the number of words in a string separated by a given character
+int		ft_count_words(char *s, char sep);
+// Frees a table of strings
+void	ft_free_strtab(char **tab);
 
 // Calls a function for every character of a string
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
@@ -78,8 +82,5 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int		ft_str_is_number(const char *str);
 
 int		get_char_index(const char c, const char *str);
-
-// Frees a table of strings
-void	ft_free_strtab(char **tab);
 
 #endif
