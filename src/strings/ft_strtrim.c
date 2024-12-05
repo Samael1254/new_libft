@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/17 16:55:40 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/20 10:55:13 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/12/05 14:46:22 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (trimmed == NULL)
 		return (NULL);
 	ft_strncpy(trimmed, &s1[start_trim], len);
+	trimmed[len] = '\0';
 	return (trimmed);
 }
 
