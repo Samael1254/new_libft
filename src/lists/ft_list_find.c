@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 15:06:32 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/20 15:06:33 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/12/05 12:38:24 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_list_find(t_list *begin_list, void *data_ref, int (*cmp)(void *,
 {
 	while (begin_list)
 	{
-		if ((*cmp)(begin_list->data, data_ref))
+		if ((*cmp)(begin_list->data, data_ref) == 0)
 			return (begin_list);
 		begin_list = begin_list->next;
 	}
