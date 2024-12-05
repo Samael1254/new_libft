@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:49:08 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/05 11:58:40 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/12/05 12:16:21 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,6 +127,6 @@ void				ft_print_int_list(t_list *begin_list, char *sep);
 // Prints a list of strings separated by a given string
 void				ft_print_str_list(t_list *begin_list, char *sep);
 // Reverse prints a list of integers separated by a given string
-void				ft_print_int_list_reverse(t_list *begin_list, char sep);
+void				ft_print_int_list_reverse(t_list *begin_list, char *sep);
 
 #endif
