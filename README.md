@@ -7,16 +7,17 @@
 - Memory management
 - Sorts
 - Linked lists
-- Hashtables (WIP)
+- Hashtables
 
 **And standalone functions of larger size :**
 - Get Next Line
 - Printf and Dprintf
 
 **Will be added in the future :**
+- _WIP_ : Algebra (vectors and matrixes) category
 - more hashtable functions
-- F, g, G, a, A conversions for printf in that order
+- F, g, G conversions for printf in that order
 
 **Known issues :**
-- The hashtable resize function segfaults
 - In printf, some double parameters appear badly rounded
+- Get_next_line is slow because of malloc for each character

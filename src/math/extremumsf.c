@@ -1,62 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   extremums.c                                        :+:      :+:    :+:   */
+/*   extremumsf.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 01:06:26 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/10 16:32:21 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/12/10 16:34:58 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_min(int a, int b)
+double	ft_minf(double a, double b)
 {
 	if (a < b)
 		return (a);
 	return (b);
 }
 
-int	ft_max(int a, int b)
+double	ft_maxf(double a, double b)
 {
 	if (a > b)
 		return (a);
 	return (b);
 }
 
-int	ft_array_max(int *array, int size)
-{
-	int	max;
-	int	i;
-
-	i = 1;
-	max = array[0];
-	while (i < size)
-	{
-		if (array[i] > max)
-			max = array[i];
-		i++;
-	}
-	return (max);
-}
-
-int	ft_array_min(int *array, int size)
-{
-	int	min;
-	int	i;
-
-	i = 1;
-	min = array[0];
-	while (i < size)
-	{
-		if (array[i] < min)
-			min = array[i];
-		i++;
-	}
-	return (min);
-}
-
-int	ft_clamp(int value, int min, int max)
+double	ft_clampf(double value, double min, double max)
 {
 	if (value < min)
 		return (min);

@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:50:28 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/22 20:58:22 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/12/10 16:36:30 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,19 @@ int			*ft_range(int min, int max);
 int			ft_min(int a, int b);
 // Returns the biggest of two integers
 int			ft_max(int a, int b);
-// Return value bounded between min and max
-int			clamp(int value, int min, int max);
+// Return the int value bound between min and max
+int			ft_clamp(int value, int min, int max);
 // Returns the smallest value inside an array of integers
 int			ft_array_min(int *array, int size);
 // Returns the biggest value inside an array of integers
 int			ft_array_max(int *array, int size);
+
+// Returns the smallest of two doubles
+double		ft_minf(double a, double b);
+// Returns the biggest of two doubles
+double		ft_maxf(double a, double b);
+// Returns the double value bound between min and max
+double		ft_clampf(double value, double min, double max);
 
 // Returns the number of characters (sign and digits) of a signed number written is a specific base
 int			signed_nbrlen_base(long long nb, int base_len);
