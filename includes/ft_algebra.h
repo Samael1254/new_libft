@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:27:40 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/11 18:59:58 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/12/11 19:07:25 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -219,7 +219,7 @@ void		ft_set_scaling_matrix4D(double m[4][4], double s);
 
 t_vector3D	ft_orthographic_projection(t_vector4D v);
 
-// ISOMETRIC PROJECTION
+// AXONOMETRIC PROJECTIONS
 
 t_vector3D	ft_axonometric_projection(t_vector4D v, double ang1, double ang2);
 t_vector3D	ft_dimetric_projection(t_vector4D v, double ang1);
