@@ -18,7 +18,7 @@ $(NAME): $(SOURCES)
 	@ echo " \033[32m Test compiled\033[m"
 
 run:
-	@ echo "\033[33mRunning test :\033[m"
+	@ echo "\033[33mRunning test :\033[m\n"
 	@ ./test
 
 all: $(NAME) run

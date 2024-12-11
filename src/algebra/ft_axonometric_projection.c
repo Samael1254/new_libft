@@ -6,20 +6,30 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 13:57:13 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/11 14:15:15 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/12/11 19:05:13 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_algebra.h"
 #include <math.h>
 
+t_vector3D	ft_axonometric_projection(t_vector4D v, double ang1, double ang2)
+{
+	t_vector3D	proj;
+
+	proj.x = cos(ang2) * v.x - sin(ang2) * v.y;
+	proj.y = -sin(ang2) * sin(ang1) * v.x - cos(ang2) * sin(ang1) * v.y
+		+ cos(ang1) * v.z;
+	proj.z = 1;
+	return (proj);
+}
+
+t_vector3D	ft_dimetric_projection(t_vector4D v, double ang1)
+{
+	return (ft_axonometric_projection(v, ang1, M_PI_4));
+}
+
 t_vector3D	ft_isometric_projection(t_vector4D v)
 {
-	double	tm[4][4];
-	double	rm2[4][4];
-
-	ft_set_base_rotation_matrix4D(tm, asin(tan(M_PI_2 / 3)), X_AXIS);
-	ft_set_base_rotation_matrix4D(rm2, M_PI_4, Z_AXIS);
-	ft_matrix4D_product(tm, rm2, tm);
-	return (ft_orthographic_projection(ft_matrix_vector_product4D(tm, v)));
+	return (ft_dimetric_projection(v, asin(tan(M_PI_2 / 3))));
 }

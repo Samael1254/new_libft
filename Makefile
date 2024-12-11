@@ -44,7 +44,7 @@ SRCS_HASHTABLE := hashtable_basics.c hashtable_utils.c hashtable_additional.c ha
 
 SRCS_ALGEBRA := ft_add_matrixes.c ft_add_vectors.c ft_are_vectors_col.c ft_are_vectors_ortho.c \
 				ft_convert_matrix.c ft_convert_vector.c ft_cross_vectors.c ft_direction_vector.c ft_distance.c \
-				ft_dot_vectors.c ft_get_base_vector.c ft_init_vector.c ft_isometric_projection.c ft_lerp.c \
+				ft_dot_vectors.c ft_get_base_vector.c ft_init_vector.c ft_axonometric_projection.c ft_lerp.c \
 				ft_line_equation.c ft_lines_intersection.c ft_matrix_product.c ft_matrix_vector_product.c ft_middle.c \
 				ft_normalize_vector.c ft_orthographic_projection.c ft_scale_matrix.c ft_scale_vector.c ft_set_null_matrix.c \
 				ft_set_rotation_matrix.c ft_set_scaling_matrix.c ft_set_stretching_matrix.c ft_set_transformation_matrix.c ft_set_translation_matrix.c \

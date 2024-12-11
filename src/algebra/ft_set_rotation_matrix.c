@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 11:04:30 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/11 18:18:42 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/12/11 18:24:05 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ void	ft_set_base_rotation_matrix3D(double m[3][3], double angle, t_axis axis)
 	ft_set_null_matrix3D(m);
 	m[axis][axis] = 1;
 	m[(axis + 1) % 3][(axis + 1) % 3] = cos(angle);
-	m[(axis + 2) % 3][(axis + 1) % 3] = -sin(angle);
-	m[(axis + 1) % 3][(axis + 2) % 3] = sin(angle);
 	m[(axis + 2) % 3][(axis + 2) % 3] = cos(angle);
+	m[(axis + 1) % 3][(axis + 2) % 3] = -sin(angle);
+	m[(axis + 2) % 3][(axis + 1) % 3] = sin(angle);
 }
 
 void	ft_set_base_rotation_matrix4D(double m[4][4], double angle, t_axis axis)

@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:27:40 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/11 17:13:58 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/12/11 18:59:58 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -221,6 +221,8 @@ t_vector3D	ft_orthographic_projection(t_vector4D v);
 
 // ISOMETRIC PROJECTION
 
+t_vector3D	ft_axonometric_projection(t_vector4D v, double ang1, double ang2);
+t_vector3D	ft_dimetric_projection(t_vector4D v, double ang1);
 t_vector3D	ft_isometric_projection(t_vector4D v);
 
 // 1-POINT PERSPECTIVE PROJECTION
