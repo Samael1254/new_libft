@@ -1,27 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_are_vectors_ortho.c                             :+:      :+:    :+:   */
+/*   ft_scale_matrix.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/10 17:00:07 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/10 17:01:50 by gfulconi         ###   ########.fr       */
+/*   Created: 2024/12/11 11:18:51 by gfulconi          #+#    #+#             */
+/*   Updated: 2024/12/11 11:20:55 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_algebra.h"
-
-int	ft_are_vectors2D_ortho(t_vector2D a, t_vector2D b)
+void	ft_scale_matrix3D(double m[3][3], double lambda)
 {
-	if (ft_dot_vectors2D(a, b) == 0)
-		return (1);
-	return (0);
+	int	i;
+	int	j;
+
+	i = 0;
+	while (i < 3)
+	{
+		j = 0;
+		while (j < 3)
+			m[i][j++] *= lambda;
+		i++;
+	}
 }
 
-int	ft_are_vectors3D_ortho(t_vector3D a, t_vector3D b)
+void	ft_scale_matrix4D(double m[4][4], double lambda)
 {
-	if (ft_dot_vectors3D(a, b) == 0)
-		return (1);
-	return (0);
+	int	i;
+	int	j;
+
+	i = 0;
+	while (i < 4)
+	{
+		j = 0;
+		while (j < 4)
+			m[i][j++] *= lambda;
+		i++;
+	}
 }

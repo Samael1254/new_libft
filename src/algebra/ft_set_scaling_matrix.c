@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_are_vectors_ortho.c                             :+:      :+:    :+:   */
+/*   ft_set_scaling_matrix.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/10 17:00:07 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/10 17:01:50 by gfulconi         ###   ########.fr       */
+/*   Created: 2024/12/11 12:12:05 by gfulconi          #+#    #+#             */
+/*   Updated: 2024/12/11 15:44:20 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_algebra.h"
 
-int	ft_are_vectors2D_ortho(t_vector2D a, t_vector2D b)
+void	ft_set_scaling_matrix3D(double m[3][3], double s)
 {
-	if (ft_dot_vectors2D(a, b) == 0)
-		return (1);
-	return (0);
+	t_vector3D	v;
+
+	v = ft_init_vector3D(s);
+	ft_set_stretching_matrix3D(m, v);
 }
 
-int	ft_are_vectors3D_ortho(t_vector3D a, t_vector3D b)
+void	ft_set_scaling_matrix4D(double m[4][4], double s)
 {
-	if (ft_dot_vectors3D(a, b) == 0)
-		return (1);
-	return (0);
+	double	m3[3][3];
+
+	ft_set_scaling_matrix3D(m3, s);
+	ft_3Dto4D_matrix(m3, m);
 }

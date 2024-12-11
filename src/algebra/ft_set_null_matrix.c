@@ -1,30 +1,56 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_powerf.c                                        :+:      :+:    :+:   */
+/*   ft_set_null_matrix.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/22 20:53:39 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/11 16:24:21 by gfulconi         ###   ########.fr       */
+/*   Created: 2024/12/11 11:06:12 by gfulconi          #+#    #+#             */
+/*   Updated: 2024/12/11 13:47:58 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_math.h"
-
-double	ft_powerf(double nb, int power)
+void	ft_set_null_matrix2D(double m[2][2])
 {
-	int		i;
-	double	result;
+	int	i;
+	int	j;
 
 	i = 0;
-	result = 1;
-	while (i < ft_abs(power))
+	while (i < 2)
 	{
-		result *= nb;
+		j = 0;
+		while (j < 2)
+			m[i][j++] = 0;
 		i++;
 	}
-	if (power < 0 && result != 0)
-		return (1.0 / result);
-	return (result);
+}
+
+void	ft_set_null_matrix3D(double m[3][3])
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (i < 3)
+	{
+		j = 0;
+		while (j < 3)
+			m[i][j++] = 0;
+		i++;
+	}
+}
+
+void	ft_set_null_matrix4D(double m[4][4])
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (i < 4)
+	{
+		j = 0;
+		while (j < 4)
+			m[i][j++] = 0;
+		i++;
+	}
 }

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "algebra.h"
+#include "ft_algebra.h"
 
 t_vector2D	ft_direction_vector2D(t_vector3D line)
 {

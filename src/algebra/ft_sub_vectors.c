@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "algebra.h"
+#include "ft_algebra.h"
 
 t_ivector2D	ft_sub_ivectors2D(t_ivector2D a, t_ivector2D b)
 {

@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_are_vectors_ortho.c                             :+:      :+:    :+:   */
+/*   ft_angle_conv.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/10 17:00:07 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/10 17:01:50 by gfulconi         ###   ########.fr       */
+/*   Created: 2024/12/11 16:36:39 by gfulconi          #+#    #+#             */
+/*   Updated: 2024/12/11 16:38:42 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_algebra.h"
+#include <math.h>
 
-int	ft_are_vectors2D_ortho(t_vector2D a, t_vector2D b)
+double	ft_rad_to_deg(double rad)
 {
-	if (ft_dot_vectors2D(a, b) == 0)
-		return (1);
-	return (0);
+	return (rad * 180 * M_1_PI);
 }
 
-int	ft_are_vectors3D_ortho(t_vector3D a, t_vector3D b)
+double	ft_deg_to_rad(double deg)
 {
-	if (ft_dot_vectors3D(a, b) == 0)
-		return (1);
-	return (0);
+	return (deg * M_PI / 180);
 }

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "algebra.h"
+#include "ft_algebra.h"
 
 t_vector3D	ft_cross_vectors3D(t_vector3D a, t_vector3D b)
 {

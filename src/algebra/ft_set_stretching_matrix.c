@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_are_vectors_ortho.c                             :+:      :+:    :+:   */
+/*   ft_set_stretching_matrix.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/10 17:00:07 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/10 17:01:50 by gfulconi         ###   ########.fr       */
+/*   Created: 2024/12/11 12:15:43 by gfulconi          #+#    #+#             */
+/*   Updated: 2024/12/11 12:18:01 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_algebra.h"
 
-int	ft_are_vectors2D_ortho(t_vector2D a, t_vector2D b)
+void	ft_set_stretching_matrix3D(double m[3][3], t_vector3D s)
 {
-	if (ft_dot_vectors2D(a, b) == 0)
-		return (1);
-	return (0);
+	ft_set_null_matrix3D(m);
+	m[0][0] = s.x;
+	m[1][1] = s.y;
+	m[2][2] = s.z;
 }
 
-int	ft_are_vectors3D_ortho(t_vector3D a, t_vector3D b)
+void	ft_set_stretching_matrix4D(double m[4][4], t_vector4D s)
 {
-	if (ft_dot_vectors3D(a, b) == 0)
-		return (1);
-	return (0);
+	ft_set_null_matrix4D(m);
+	m[0][0] = s.x;
+	m[1][1] = s.y;
+	m[2][2] = s.z;
+	m[3][3] = s.z;
 }

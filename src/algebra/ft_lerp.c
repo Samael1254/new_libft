@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "algebra.h"
+#include "ft_algebra.h"
 #include "ft_math.h"
 
 t_vector2D	ft_lerp2D(t_vector2D a, t_vector2D b, double lambda)

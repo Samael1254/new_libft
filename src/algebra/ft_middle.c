@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "algebra.h"
+#include "ft_algebra.h"
 
 t_vector2D	ft_middle2D(t_vector2D a, t_vector2D b)
 {

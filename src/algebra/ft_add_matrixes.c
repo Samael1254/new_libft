@@ -1,27 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_are_vectors_ortho.c                             :+:      :+:    :+:   */
+/*   ft_add_matrixes.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/10 17:00:07 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/10 17:01:50 by gfulconi         ###   ########.fr       */
+/*   Created: 2024/12/11 11:14:25 by gfulconi          #+#    #+#             */
+/*   Updated: 2024/12/11 11:17:43 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_algebra.h"
-
-int	ft_are_vectors2D_ortho(t_vector2D a, t_vector2D b)
+void	ft_add_matrixes3D(double a[3][3], double b[3][3], double sum[3][3])
 {
-	if (ft_dot_vectors2D(a, b) == 0)
-		return (1);
-	return (0);
+	int	i;
+	int	j;
+
+	i = 0;
+	while (i < 3)
+	{
+		j = 0;
+		while (j < 3)
+		{
+			sum[i][j] = a[i][j] + b[i][j];
+			j++;
+		}
+		i++;
+	}
 }
 
-int	ft_are_vectors3D_ortho(t_vector3D a, t_vector3D b)
+void	ft_add_matrixes4D(double a[4][4], double b[4][4], double sum[4][4])
 {
-	if (ft_dot_vectors3D(a, b) == 0)
-		return (1);
-	return (0);
+	int	i;
+	int	j;
+
+	i = 0;
+	while (i < 4)
+	{
+		j = 0;
+		while (j < 4)
+		{
+			sum[i][j] = a[i][j] + b[i][j];
+			j++;
+		}
+		i++;
+	}
 }

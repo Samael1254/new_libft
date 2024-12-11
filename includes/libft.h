@@ -6,13 +6,14 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/17 17:18:13 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/22 12:15:14 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/12/11 15:44:55 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include "ft_algebra.h"
 # include "ft_chars.h"
 # include "ft_conversion.h"
 # include "ft_hashtable.h"

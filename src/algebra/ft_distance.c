@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "algebra.h"
+#include "ft_algebra.h"
 
 double	ft_distance2D(t_vector2D a, t_vector2D b)
 {

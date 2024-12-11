@@ -15,9 +15,10 @@
 
 **Will be added in the future :**
 - _WIP_ : Algebra (vectors and matrixes) category
-- more hashtable functions
+- More hashtable functions
 - F, g, G conversions for printf in that order
 
 **Known issues :**
 - In printf, some double parameters appear badly rounded
+- Padding one too much in printf with negative doubles
 - Get_next_line is slow because of malloc for each character

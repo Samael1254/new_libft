@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_are_vectors_ortho.c                             :+:      :+:    :+:   */
+/*   ft_set_vector.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/10 17:00:07 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/10 17:01:50 by gfulconi         ###   ########.fr       */
+/*   Created: 2024/12/11 10:53:38 by gfulconi          #+#    #+#             */
+/*   Updated: 2024/12/11 10:53:38 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_algebra.h"
 
-int	ft_are_vectors2D_ortho(t_vector2D a, t_vector2D b)
+void	ft_set_vector2D(t_vector2D *v, double x, double y)
 {
-	if (ft_dot_vectors2D(a, b) == 0)
-		return (1);
-	return (0);
+	v->x = x;
+	v->y = y;
 }
 
-int	ft_are_vectors3D_ortho(t_vector3D a, t_vector3D b)
+void	ft_set_vector3D(t_vector3D *v, double x, double y, double z)
 {
-	if (ft_dot_vectors3D(a, b) == 0)
-		return (1);
-	return (0);
+	v->x = x;
+	v->y = y;
+	v->z = z;
 }

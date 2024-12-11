@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "algebra.h"
+#include "ft_algebra.h"
 #include <math.h>
 
 double	ft_vectors2D_angle(t_vector2D a, t_vector2D b)

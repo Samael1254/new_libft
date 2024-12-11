@@ -1,27 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_are_vectors_ortho.c                             :+:      :+:    :+:   */
+/*   ft_convert_matrix.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/10 17:00:07 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/10 17:01:50 by gfulconi         ###   ########.fr       */
+/*   Created: 2024/12/11 11:42:37 by gfulconi          #+#    #+#             */
+/*   Updated: 2024/12/11 12:41:43 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_algebra.h"
 
-int	ft_are_vectors2D_ortho(t_vector2D a, t_vector2D b)
+void	ft_3Dto4D_matrix(double m3[3][3], double m4[4][4])
 {
-	if (ft_dot_vectors2D(a, b) == 0)
-		return (1);
-	return (0);
+	int	i;
+	int	j;
+
+	ft_set_null_matrix4D(m4);
+	i = 0;
+	while (i < 3)
+	{
+		j = 0;
+		while (j < 3)
+		{
+			m4[i][j] = m3[i][j];
+			j++;
+		}
+		i++;
+	}
+	m4[3][3] = 1;
 }
 
-int	ft_are_vectors3D_ortho(t_vector3D a, t_vector3D b)
+void	ft_4Dto3D_matrix(double m4[4][4], double m3[3][3])
 {
-	if (ft_dot_vectors3D(a, b) == 0)
-		return (1);
-	return (0);
+	int	i;
+	int	j;
+
+	i = 0;
+	while (i < 3)
+	{
+		j = 0;
+		while (j < 3)
+		{
+			m3[i][j] = m4[i][j];
+			j++;
+		}
+		i++;
+	}
 }

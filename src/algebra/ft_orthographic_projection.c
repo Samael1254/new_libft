@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_are_vectors_ortho.c                             :+:      :+:    :+:   */
+/*   ft_orthographic_projection.c                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/10 17:00:07 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/10 17:01:50 by gfulconi         ###   ########.fr       */
+/*   Created: 2024/12/11 13:41:31 by gfulconi          #+#    #+#             */
+/*   Updated: 2024/12/11 13:59:25 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_algebra.h"
 
-int	ft_are_vectors2D_ortho(t_vector2D a, t_vector2D b)
+t_vector3D	ft_orthographic_projection(t_vector4D v)
 {
-	if (ft_dot_vectors2D(a, b) == 0)
-		return (1);
-	return (0);
-}
+	t_vector3D	proj;
 
-int	ft_are_vectors3D_ortho(t_vector3D a, t_vector3D b)
-{
-	if (ft_dot_vectors3D(a, b) == 0)
-		return (1);
-	return (0);
+	proj.x = v.x;
+	proj.y = v.y;
+	proj.z = 0;
+	return (proj);
 }

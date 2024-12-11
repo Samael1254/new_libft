@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "algebra.h"
+#include "ft_algebra.h"
 
 int	ft_are_vectors2D_col(t_vector2D a, t_vector2D b)
 {
