@@ -20,5 +20,4 @@
 
 **Known issues :**
 - In printf, some double parameters appear badly rounded
-- Padding one too much in printf with negative doubles
 - Get_next_line is slow because of malloc for each character

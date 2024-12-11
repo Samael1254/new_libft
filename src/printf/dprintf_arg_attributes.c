@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:29:02 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/22 22:10:56 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/12/11 18:20:41 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,8 @@ int	get_doublelen(const char conv, t_value val, t_arg_params params)
 	{
 		return (signed_nbrlen_base(ft_truncate(val.f), 10)
 			+ (params.precision > 0) * (params.precision + 1)
-			+ (params.flags[PLUS_FLAG] || params.flags[SPACE_FLAG]));
+			+ (params.flags[PLUS_FLAG] || params.flags[SPACE_FLAG]))
+			+ (val.f < 0);
 	}
 	return ((val.f < 0 || params.flags[PLUS_FLAG] || params.flags[SPACE_FLAG])
 		+ 1 + (params.precision > 0) * (params.precision + 1) + 2 + ft_max(2,
