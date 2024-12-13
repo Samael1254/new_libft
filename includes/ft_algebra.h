@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:27:40 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/13 12:52:29 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/12/13 13:33:27 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -244,6 +244,9 @@ t_vector3D	ft_cavalier_projection(t_vector4D v);
 t_vector3D	ft_cabinet_projection(t_vector4D v);
 
 // 1-POINT PERSPECTIVE PROJECTION
+
+t_vector3D	ft_perspective_projection(t_vector4D v, t_vector4D cam_pos,
+				t_vector3D cam_rot, t_ivector2D display_size);
 
 // MATRIX DETERMINANT
 
