@@ -24,7 +24,8 @@ SRCS_LIST := ft_create_elem.c ft_delete_elem.c ft_int_array_to_list.c ft_list_at
 
 SRCS_MATH := extremums.c ft_abs.c ft_factorial.c ft_fibonnaci.c ft_find_next_prime.c \
 			 ft_isprime.c ft_power.c ft_range.c ft_sqrt.c get_nblen_base.c \
-			 ft_truncate.c ft_round.c ft_get_exponent.c ft_powerf.c extremumsf.c
+			 ft_truncate.c ft_round.c ft_get_exponent.c ft_powerf.c extremumsf.c \
+			 ft_doublelen.c
 
 SRCS_MEMORY := ft_bzero.c ft_calloc.c ft_memchr.c ft_memcmp.c ft_memcpy.c \
 			   ft_memmove.c ft_memset.c
@@ -42,13 +43,14 @@ SRCS_PRINTF := ft_printf.c ft_dprintf.c ft_vdprintf.c dprintf_arg_attributes.c d
 
 SRCS_HASHTABLE := hashtable_basics.c hashtable_utils.c hashtable_additional.c hashtable_additional_2.c
 
-SRCS_ALGEBRA := ft_add_matrixes.c ft_add_vectors.c ft_are_vectors_col.c ft_are_vectors_ortho.c \
+SRCS_ALGEBRA := ft_add_matrixes.c ft_add_vectors.c ft_are_vectors_col.c ft_are_vectors_ortho.c ft_print_vector.c\
 				ft_convert_matrix.c ft_convert_vector.c ft_cross_vectors.c ft_direction_vector.c ft_distance.c \
 				ft_dot_vectors.c ft_get_base_vector.c ft_init_vector.c ft_axonometric_projection.c ft_lerp.c \
 				ft_line_equation.c ft_lines_intersection.c ft_matrix_product.c ft_matrix_vector_product.c ft_middle.c \
 				ft_normalize_vector.c ft_orthographic_projection.c ft_scale_matrix.c ft_scale_vector.c ft_set_null_matrix.c \
-				ft_set_rotation_matrix.c ft_set_scaling_matrix.c ft_set_stretching_matrix.c ft_set_transformation_matrix.c ft_set_translation_matrix.c \
-				ft_set_vector.c ft_sub_vectors.c ft_vector_norm.c ft_vectors_angle.c ft_convert_angle.c
+				ft_set_rotation_matrix.c ft_set_scaling_matrix.c ft_set_stretching_matrix.c ft_set_translation_matrix.c ft_print_matrix.c\
+				ft_set_vector.c ft_sub_vectors.c ft_vector_norm.c ft_vectors_angle.c ft_convert_angle.c \
+				ft_print_matrix.c ft_oblique_projection.c ft_perspective_projection.c
 
 SOURCES := $(addprefix $(SOURCES_DIR)chars/, $(SRCS_CHARS)) $(addprefix $(SOURCES_DIR)conversion/, $(SRCS_CONVERSION)) \
 		   $(addprefix $(SOURCES_DIR)get_next_line/, $(SRCS_GET_NEXT_LINE)) $(addprefix $(SOURCES_DIR)lists/, $(SRCS_LIST)) \

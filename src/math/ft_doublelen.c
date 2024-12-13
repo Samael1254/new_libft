@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_orthographic_projection.c                       :+:      :+:    :+:   */
+/*   ft_doublelen.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/11 13:41:31 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/12 17:58:03 by gfulconi         ###   ########.fr       */
+/*   Created: 2024/12/12 13:30:56 by gfulconi          #+#    #+#             */
+/*   Updated: 2024/12/12 16:51:34 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_algebra.h"
+#include "ft_math.h"
 
-t_vector3D	ft_orthographic_projection(t_vector4D v)
+int	ft_doublelen(double nb, int precision)
 {
-	t_vector3D	proj;
-
-	proj.x = v.x;
-	proj.y = v.y;
-	proj.z = 1;
-	return (proj);
+	return (usigned_nbrlen_base(ft_abs(ft_truncate(nb)), 10) + (precision > 0)
+		* (precision + 1) + (nb < 0));
 }

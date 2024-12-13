@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:50:28 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/10 16:36:30 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/12/12 13:38:29 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ double		ft_clampf(double value, double min, double max);
 int			signed_nbrlen_base(long long nb, int base_len);
 // Returns the number of characters (digits) of an unsigned number written is a specific base
 int			usigned_nbrlen_base(unsigned long long nb, int base_len);
+// Returns the number of characters (digits sign and point) of a base ten double number
+int			ft_doublelen(double nb, int precision);
 
 // Converts a double to an integer by truncating its decimal part
 long long	ft_truncate(double nb);
@@ -68,8 +70,7 @@ int			ft_get_exponent(double nb);
 // Trigonomerty
 // Operations on doubles
 // PGCD and PPCM
-// Matrixes and vectors
-// Statistics (mean, variance, median, binomial coeff)
+// Statistics (mean, variance, median, binomial coeff, distributions)
 // Numerical Integration
 // Complex numbers
 

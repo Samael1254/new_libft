@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:27:40 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/11 19:07:25 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/12/12 18:00:45 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,13 @@ typedef struct s_vector4D
 
 t_vector2D	ft_add_vectors2D(t_vector2D a, t_vector2D b);
 t_vector3D	ft_add_vectors3D(t_vector3D a, t_vector3D b);
+t_vector4D	ft_add_vectors4D(t_vector4D a, t_vector4D b);
 
 // SUB
 
 t_vector2D	ft_sub_vectors2D(t_vector2D a, t_vector2D b);
 t_vector3D	ft_sub_vectors3D(t_vector3D a, t_vector3D b);
+t_vector4D	ft_sub_vectors4D(t_vector4D a, t_vector4D b);
 
 // SCALE
 
@@ -150,6 +152,11 @@ t_vector2D	ft_init_vector2D(double value);
 t_vector3D	ft_init_vector3D(double value);
 t_vector4D	ft_init_vector4D(double value);
 
+// ROTATE VECTOR
+
+t_vector4D	ft_rotate_vector4D(t_vector4D v, t_vector3D rotator);
+t_vector3D	ft_rotate_vector3D(t_vector3D v, t_vector2D rotator);
+
 // GET BASE VECTOR
 
 t_vector2D	ft_get_base_vector2D(t_axis axis);
@@ -225,11 +232,13 @@ t_vector3D	ft_axonometric_projection(t_vector4D v, double ang1, double ang2);
 t_vector3D	ft_dimetric_projection(t_vector4D v, double ang1);
 t_vector3D	ft_isometric_projection(t_vector4D v);
 
-// 1-POINT PERSPECTIVE PROJECTION
-
 // OBLIQUE PROJECTION
 
-// AXONOMETRIC PROJECTION
+t_vector3D	ft_oblique_projection(t_vector4D v, double depth, double angle);
+t_vector3D	ft_cavalier_projection(t_vector4D v);
+t_vector3D	ft_cabinet_projection(t_vector4D v);
+
+// 1-POINT PERSPECTIVE PROJECTION
 
 // MATRIX DETERMINANT
 
@@ -253,6 +262,17 @@ t_vector3D	ft_isometric_projection(t_vector4D v);
 
 // TRANSPOSED MATRIX
 
-// MATRIX INVERSE
+// INVERSE MATRIX
+
+// PRINT VECTOR
+
+void		ft_print_vector2D(t_vector2D v, int precision);
+void		ft_print_vector3D(t_vector3D v, int precision);
+void		ft_print_vector4D(t_vector4D v, int precision);
+
+// PRINT MATRIX
+
+void		ft_print_matrix3D(double m[3][3], int precision);
+void		ft_print_matrix4D(double m[4][4], int precision);
 
 #endif
