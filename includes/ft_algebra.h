@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:27:40 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/13 13:33:27 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/12/13 16:35:27 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ t_vector4D	ft_sub_vectors4D(t_vector4D a, t_vector4D b);
 
 t_vector2D	ft_scale_vector2D(int lambda, t_vector2D a);
 t_vector3D	ft_scale_vector3D(int lambda, t_vector3D a);
+t_vector4D	ft_scale_vector4D(int lambda, t_vector4D a);
 
 // NORM
 
