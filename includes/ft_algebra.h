@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:27:40 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/12 18:00:45 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/12/13 12:52:29 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -156,6 +156,11 @@ t_vector4D	ft_init_vector4D(double value);
 
 t_vector4D	ft_rotate_vector4D(t_vector4D v, t_vector3D rotator);
 t_vector3D	ft_rotate_vector3D(t_vector3D v, t_vector2D rotator);
+
+// TRANSLATE VECTOR
+
+t_vector3D	ft_translate_vector3D(t_vector3D v, t_vector2D translator);
+t_vector4D	ft_translate_vector4D(t_vector4D v, t_vector3D translator);
 
 // GET BASE VECTOR
 
