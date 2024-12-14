@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 16:55:24 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/12 17:30:20 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/12/14 22:42:22 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ t_vector3D	ft_oblique_projection(t_vector4D v, double depth, double angle)
 {
 	t_vector3D	proj;
 
-	proj.x = v.x + depth * cos(angle) * v.z;
-	proj.y = v.y + depth * sin(angle) * v.z;
+	proj.x = v.x + depth * cos(angle) * v.y;
+	proj.y = v.z - depth * sin(angle) * v.y;
 	proj.z = 1;
 	return (proj);
 }

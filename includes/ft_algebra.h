@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:27:40 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/13 16:35:27 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/12/14 23:11:10 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -144,8 +144,10 @@ t_vector2D	ft_i2Dto2D_vector(t_ivector2D vi2);
 
 // SET VECTOR
 
-void		ft_set_vector2D(t_vector2D *v, double x, double y);
-void		ft_set_vector3D(t_vector3D *v, double x, double y, double z);
+t_ivector2D	ft_set_ivector2D(int x, int y);
+t_vector2D	ft_set_vector2D(double x, double y);
+t_vector3D	ft_set_vector3D(double x, double y, double z);
+t_vector4D	ft_set_vector4D(double x, double y, double z, double w);
 
 // INIT VECTOR
 
