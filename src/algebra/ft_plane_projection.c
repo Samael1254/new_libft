@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_perspective_projection.c                        :+:      :+:    :+:   */
+/*   ft_plane_projection.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/12 17:30:49 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/15 13:33:59 by gfulconi         ###   ########.fr       */
+/*   Created: 2024/12/15 13:38:13 by gfulconi          #+#    #+#             */
+/*   Updated: 2024/12/15 15:48:59 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_algebra.h"
 
-t_vector3D	ft_perspective_projection(t_vector4D v, t_vector4D cam_pos,
-		t_vector3D cam_rot, t_ivector2D display_size)
+t_vector3D	ft_plane_projection(t_vector4D v, t_axis normal)
 {
 	t_vector3D	proj;
-	t_vector4D	view_v;
 
-	(void)display_size;
-	view_v = ft_rotate_vector4D(v, cam_rot);
-	view_v = ft_translate_vector4D(view_v, ft_4Dto3D_vector(cam_pos));
-	if (view_v.x == 0)
-		return (ft_set_vector3D(0, 0, 0));
-	proj.x = view_v.y / view_v.x;
-	proj.y = view_v.z / view_v.x;
+	if (normal == X_AXIS)
+	{
+		proj.x = v.x;
+		proj.y = -v.y;
+	}
+	else if (normal == Z_AXIS)
+	{
+		proj.x = v.y;
+		proj.y = v.z;
+	}
+	else if (normal == Y_AXIS)
+	{
+		proj.x = v.x;
+		proj.y = v.z;
+	}
 	proj.z = 1;
 	return (proj);
 }

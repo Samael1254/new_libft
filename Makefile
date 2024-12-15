@@ -50,7 +50,8 @@ SRCS_ALGEBRA := ft_add_matrixes.c ft_add_vectors.c ft_are_vectors_col.c ft_are_v
 				ft_normalize_vector.c ft_orthographic_projection.c ft_scale_matrix.c ft_scale_vector.c ft_set_null_matrix.c \
 				ft_set_rotation_matrix.c ft_set_scaling_matrix.c ft_set_stretching_matrix.c ft_set_translation_matrix.c ft_print_matrix.c\
 				ft_set_vector.c ft_sub_vectors.c ft_vector_norm.c ft_vectors_angle.c ft_convert_angle.c \
-				ft_print_matrix.c ft_oblique_projection.c ft_perspective_projection.c ft_rotate_vector.c ft_translate_vector.c
+				ft_print_matrix.c ft_oblique_projection.c ft_perspective_projection.c ft_rotate_vector.c ft_translate_vector.c \
+				ft_plane_projection.c
 
 SOURCES := $(addprefix $(SOURCES_DIR)chars/, $(SRCS_CHARS)) $(addprefix $(SOURCES_DIR)conversion/, $(SRCS_CONVERSION)) \
 		   $(addprefix $(SOURCES_DIR)get_next_line/, $(SRCS_GET_NEXT_LINE)) $(addprefix $(SOURCES_DIR)lists/, $(SRCS_LIST)) \

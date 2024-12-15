@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:27:40 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/14 23:11:10 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/12/15 13:44:57 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -245,6 +245,10 @@ t_vector3D	ft_isometric_projection(t_vector4D v);
 t_vector3D	ft_oblique_projection(t_vector4D v, double depth, double angle);
 t_vector3D	ft_cavalier_projection(t_vector4D v);
 t_vector3D	ft_cabinet_projection(t_vector4D v);
+
+// PLANE PROJECTION
+
+t_vector3D	ft_plane_projection(t_vector4D v, t_axis normal);
 
 // 1-POINT PERSPECTIVE PROJECTION
 
