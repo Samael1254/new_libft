@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:49:08 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/05 12:16:21 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/12/15 16:14:45 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,8 @@ t_list				*ft_list_find(t_list *begin_list, void *data_ref,
 						int (*cmp)(void *, void *));
 // Returns the index of a given element in a list
 int					ft_list_index(t_list *begin_list, t_list *elem);
-// Returns the index of the first element where the data satisfies the given comparison
+// Returns the index of the first element where the data satisfies the given
+// comparison
 int					ft_list_find_index(t_list *begin_list, void *data,
 						int (*cmp)(void *, void *));
 

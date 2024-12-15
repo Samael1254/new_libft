@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_set_null_matrix2D(double m[2][2])
+void	ft_set_null_matrix2d(double m[2][2])
 {
 	int	i;
 	int	j;
@@ -25,7 +25,7 @@ void	ft_set_null_matrix2D(double m[2][2])
 	}
 }
 
-void	ft_set_null_matrix3D(double m[3][3])
+void	ft_set_null_matrix3d(double m[3][3])
 {
 	int	i;
 	int	j;
@@ -40,7 +40,7 @@ void	ft_set_null_matrix3D(double m[3][3])
 	}
 }
 
-void	ft_set_null_matrix4D(double m[4][4])
+void	ft_set_null_matrix4d(double m[4][4])
 {
 	int	i;
 	int	j;

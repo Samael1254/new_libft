@@ -13,14 +13,14 @@
 #include "ft_algebra.h"
 #include <math.h>
 
-double	ft_vectors2D_angle(t_vector2D a, t_vector2D b)
+double	ft_vectors2d_angle(t_vector2d a, t_vector2d b)
 {
-	return (acos(ft_dot_vectors2D(a, b) / (ft_vector2D_norm(a)
-				* ft_vector2D_norm(b))));
+	return (acos(ft_dot_vectors2d(a, b) / (ft_vector2d_norm(a)
+				* ft_vector2d_norm(b))));
 }
 
-double	ft_vectors3D_angle(t_vector3D a, t_vector3D b)
+double	ft_vectors3d_angle(t_vector3d a, t_vector3d b)
 {
-	return (acos(ft_dot_vectors3D(a, b) / (ft_vector3D_norm(a)
-				* ft_vector3D_norm(b))));
+	return (acos(ft_dot_vectors3d(a, b) / (ft_vector3d_norm(a)
+				* ft_vector3d_norm(b))));
 }

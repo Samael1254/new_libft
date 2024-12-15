@@ -13,9 +13,9 @@
 #include "ft_algebra.h"
 #include <math.h>
 
-t_vector3D	ft_oblique_projection(t_vector4D v, double depth, double angle)
+t_vector3d	ft_oblique_projection(t_vector4d v, double depth, double angle)
 {
-	t_vector3D	proj;
+	t_vector3d	proj;
 
 	proj.x = v.x + depth * cos(angle) * v.y;
 	proj.y = v.z - depth * sin(angle) * v.y;
@@ -23,12 +23,12 @@ t_vector3D	ft_oblique_projection(t_vector4D v, double depth, double angle)
 	return (proj);
 }
 
-t_vector3D	ft_cavalier_projection(t_vector4D v)
+t_vector3d	ft_cavalier_projection(t_vector4d v)
 {
 	return (ft_oblique_projection(v, 1, M_PI_4));
 }
 
-t_vector3D	ft_cabinet_projection(t_vector4D v)
+t_vector3d	ft_cabinet_projection(t_vector4d v)
 {
 	return (ft_oblique_projection(v, 0.5, M_PI_4));
 }

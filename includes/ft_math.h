@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:50:28 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/12 13:38:29 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/12/15 16:15:21 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,14 @@ double		ft_maxf(double a, double b);
 // Returns the double value bound between min and max
 double		ft_clampf(double value, double min, double max);
 
-// Returns the number of characters (sign and digits) of a signed number written is a specific base
+// Returns the number of characters (sign and digits) of a signed number
+// written is a specific base
 int			signed_nbrlen_base(long long nb, int base_len);
-// Returns the number of characters (digits) of an unsigned number written is a specific base
+// Returns the number of characters (digits) of an unsigned number written
+// is a specific base
 int			usigned_nbrlen_base(unsigned long long nb, int base_len);
-// Returns the number of characters (digits sign and point) of a base ten double number
+// Returns the number of characters (digits sign and point) of a base ten
+// double number
 int			ft_doublelen(double nb, int precision);
 
 // Converts a double to an integer by truncating its decimal part

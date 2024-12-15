@@ -14,7 +14,7 @@
 #include "ft_math.h"
 #include "ft_printf.h"
 
-void	ft_print_vector4D(t_vector4D v, int precision)
+void	ft_print_vector4d(t_vector4d v, int precision)
 {
 	int	max_len;
 
@@ -27,7 +27,7 @@ void	ft_print_vector4D(t_vector4D v, int precision)
 	ft_printf("    ⌞%*.*f⌟\n\n", max_len, precision, v.w);
 }
 
-void	ft_print_vector3D(t_vector3D v, int precision)
+void	ft_print_vector3d(t_vector3d v, int precision)
 {
 	int	max_len;
 
@@ -38,7 +38,7 @@ void	ft_print_vector3D(t_vector3D v, int precision)
 	ft_printf("    ⌞%*.*f⌟\n\n", max_len, precision, v.z);
 }
 
-void	ft_print_vector2D(t_vector2D v, int precision)
+void	ft_print_vector2d(t_vector2d v, int precision)
 {
 	int	max_len;
 

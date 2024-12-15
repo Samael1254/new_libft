@@ -12,27 +12,27 @@
 
 #include "ft_algebra.h"
 
-t_vector4D	ft_rotate_vector4D(t_vector4D v, t_vector3D rotator)
+t_vector4d	ft_rotate_vector4d(t_vector4d v, t_vector3d rotator)
 {
 	double	rx[4][4];
 	double	ry[4][4];
 	double	rz[4][4];
 
-	ft_set_base_rotation_matrix4D(rx, rotator.x, X_AXIS);
-	ft_set_base_rotation_matrix4D(ry, rotator.y, Y_AXIS);
-	ft_set_base_rotation_matrix4D(rz, rotator.z, Z_AXIS);
-	v = ft_matrix_vector_product4D(rz, ft_matrix_vector_product4D(ry,
-				ft_matrix_vector_product4D(rx, v)));
+	ft_set_base_rotation_matrix4d(rx, rotator.x, X_AXIS);
+	ft_set_base_rotation_matrix4d(ry, rotator.y, Y_AXIS);
+	ft_set_base_rotation_matrix4d(rz, rotator.z, Z_AXIS);
+	v = ft_matrix_vector_product4d(rz, ft_matrix_vector_product4d(ry,
+				ft_matrix_vector_product4d(rx, v)));
 	return (v);
 }
 
-t_vector3D	ft_rotate_vector3D(t_vector3D v, t_vector2D rotator)
+t_vector3d	ft_rotate_vector3d(t_vector3d v, t_vector2d rotator)
 {
 	double	rx[3][3];
 	double	ry[3][3];
 
-	ft_set_base_rotation_matrix3D(rx, rotator.x, X_AXIS);
-	ft_set_base_rotation_matrix3D(ry, rotator.y, Y_AXIS);
-	v = ft_matrix_vector_product3D(ry, ft_matrix_vector_product3D(rx, v));
+	ft_set_base_rotation_matrix3d(rx, rotator.x, X_AXIS);
+	ft_set_base_rotation_matrix3d(ry, rotator.y, Y_AXIS);
+	v = ft_matrix_vector_product3d(ry, ft_matrix_vector_product3d(rx, v));
 	return (v);
 }

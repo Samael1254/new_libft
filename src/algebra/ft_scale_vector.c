@@ -12,27 +12,27 @@
 
 #include "ft_algebra.h"
 
-t_ivector2D	ft_scale_ivector2D(int lambda, t_ivector2D a)
+t_ivector2d	ft_scale_ivector2d(int lambda, t_ivector2d a)
 {
-	t_ivector2D	scaled;
+	t_ivector2d	scaled;
 
 	scaled.x = lambda * a.x;
 	scaled.y = lambda * a.y;
 	return (scaled);
 }
 
-t_vector2D	ft_scale_vector2D(int lambda, t_vector2D a)
+t_vector2d	ft_scale_vector2d(int lambda, t_vector2d a)
 {
-	t_vector2D	scaled;
+	t_vector2d	scaled;
 
 	scaled.x = lambda * a.x;
 	scaled.y = lambda * a.y;
 	return (scaled);
 }
 
-t_vector3D	ft_scale_vector3D(int lambda, t_vector3D a)
+t_vector3d	ft_scale_vector3d(int lambda, t_vector3d a)
 {
-	t_vector3D	scaled;
+	t_vector3d	scaled;
 
 	scaled.x = lambda * a.x;
 	scaled.y = lambda * a.y;
@@ -40,9 +40,9 @@ t_vector3D	ft_scale_vector3D(int lambda, t_vector3D a)
 	return (scaled);
 }
 
-t_vector4D	ft_scale_vector4D(int lambda, t_vector4D a)
+t_vector4d	ft_scale_vector4d(int lambda, t_vector4d a)
 {
-	t_vector4D	scaled;
+	t_vector4d	scaled;
 
 	scaled.x = lambda * a.x;
 	scaled.y = lambda * a.y;

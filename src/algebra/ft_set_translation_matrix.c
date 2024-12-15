@@ -12,11 +12,11 @@
 
 #include "ft_algebra.h"
 
-void	ft_set_translation_matrix3D(double m[3][3], t_vector2D t)
+void	ft_set_translation_matrix3d(double m[3][3], t_vector2d t)
 {
 	int	i;
 
-	ft_set_null_matrix3D(m);
+	ft_set_null_matrix3d(m);
 	i = 0;
 	while (i < 3)
 	{
@@ -27,11 +27,11 @@ void	ft_set_translation_matrix3D(double m[3][3], t_vector2D t)
 	m[1][2] = t.y;
 }
 
-void	ft_set_translation_matrix4D(double m[4][4], t_vector3D t)
+void	ft_set_translation_matrix4d(double m[4][4], t_vector3d t)
 {
 	int	i;
 
-	ft_set_null_matrix4D(m);
+	ft_set_null_matrix4d(m);
 	i = 0;
 	while (i < 4)
 	{

@@ -12,27 +12,27 @@
 
 #include "ft_algebra.h"
 
-t_ivector2D	ft_set_ivector2D(int x, int y)
+t_ivector2d	ft_set_ivector2d(int x, int y)
 {
-	t_ivector2D	v;
+	t_ivector2d	v;
 
 	v.x = x;
 	v.y = y;
 	return (v);
 }
 
-t_vector2D	ft_set_vector2D(double x, double y)
+t_vector2d	ft_set_vector2d(double x, double y)
 {
-	t_vector2D	v;
+	t_vector2d	v;
 
 	v.x = x;
 	v.y = y;
 	return (v);
 }
 
-t_vector3D	ft_set_vector3D(double x, double y, double z)
+t_vector3d	ft_set_vector3d(double x, double y, double z)
 {
-	t_vector3D	v;
+	t_vector3d	v;
 
 	v.x = x;
 	v.y = y;
@@ -40,9 +40,9 @@ t_vector3D	ft_set_vector3D(double x, double y, double z)
 	return (v);
 }
 
-t_vector4D	ft_set_vector4D(double x, double y, double z, double w)
+t_vector4d	ft_set_vector4d(double x, double y, double z, double w)
 {
-	t_vector4D	v;
+	t_vector4d	v;
 
 	v.x = x;
 	v.y = y;

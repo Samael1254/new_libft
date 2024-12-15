@@ -12,18 +12,18 @@
 
 #include "ft_algebra.h"
 
-t_vector2D	ft_middle2D(t_vector2D a, t_vector2D b)
+t_vector2d	ft_middle2d(t_vector2d a, t_vector2d b)
 {
-	t_vector2D	middle;
+	t_vector2d	middle;
 
 	middle.x = (a.x + b.x) * 0.5;
 	middle.y = (a.y + b.y) * 0.5;
 	return (middle);
 }
 
-t_vector3D	ft_middle3D(t_vector3D a, t_vector3D b)
+t_vector3d	ft_middle3d(t_vector3d a, t_vector3d b)
 {
-	t_vector3D	middle;
+	t_vector3d	middle;
 
 	middle.x = (a.x + b.x) * 0.5;
 	middle.y = (a.y + b.y) * 0.5;

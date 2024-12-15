@@ -12,12 +12,12 @@
 
 #include "ft_algebra.h"
 
-void	ft_3Dto4D_matrix(double m3[3][3], double m4[4][4])
+void	ft_3dto4d_matrix(double m3[3][3], double m4[4][4])
 {
 	int	i;
 	int	j;
 
-	ft_set_null_matrix4D(m4);
+	ft_set_null_matrix4d(m4);
 	i = 0;
 	while (i < 3)
 	{
@@ -32,7 +32,7 @@ void	ft_3Dto4D_matrix(double m3[3][3], double m4[4][4])
 	m4[3][3] = 1;
 }
 
-void	ft_4Dto3D_matrix(double m4[4][4], double m3[3][3])
+void	ft_4dto3d_matrix(double m4[4][4], double m3[3][3])
 {
 	int	i;
 	int	j;

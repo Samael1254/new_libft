@@ -12,12 +12,12 @@
 
 #include "ft_algebra.h"
 
-t_vector2D	ft_normalize_vector2D(t_vector2D a)
+t_vector2d	ft_normalize_vector2d(t_vector2d a)
 {
-	t_vector2D	normalized;
+	t_vector2d	normalized;
 	double		norm;
 
-	norm = ft_vector2D_norm(a);
+	norm = ft_vector2d_norm(a);
 	if (norm == 0)
 		return (a);
 	normalized.x = a.x / norm;
@@ -25,12 +25,12 @@ t_vector2D	ft_normalize_vector2D(t_vector2D a)
 	return (normalized);
 }
 
-t_vector3D	ft_normalize_vector3D(t_vector3D a)
+t_vector3d	ft_normalize_vector3d(t_vector3d a)
 {
-	t_vector3D	normalized;
+	t_vector3d	normalized;
 	double		norm;
 
-	norm = ft_vector3D_norm(a);
+	norm = ft_vector3d_norm(a);
 	if (norm == 0)
 		return (a);
 	normalized.x = a.x / norm;

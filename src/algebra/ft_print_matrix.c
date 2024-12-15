@@ -31,7 +31,7 @@ static int	matrix_max_elem_size(int precision, int size, double m[size][size])
 	return (max_len);
 }
 
-void	ft_print_matrix3D(double m[3][3], int precision)
+void	ft_print_matrix3d(double m[3][3], int precision)
 {
 	int	j;
 	int	max_len;
@@ -52,7 +52,7 @@ void	ft_print_matrix3D(double m[3][3], int precision)
 	ft_printf("⌟\n\n");
 }
 
-void	ft_print_matrix4D(double m[4][4], int precision)
+void	ft_print_matrix4d(double m[4][4], int precision)
 {
 	int	j;
 	int	max_len;

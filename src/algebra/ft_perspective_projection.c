@@ -12,17 +12,17 @@
 
 #include "ft_algebra.h"
 
-t_vector3D	ft_perspective_projection(t_vector4D v, t_vector4D cam_pos,
-		t_vector3D cam_rot, t_ivector2D display_size)
+t_vector3d	ft_perspective_projection(t_vector4d v, t_vector4d cam_pos,
+		t_vector3d cam_rot, t_ivector2d display_size)
 {
-	t_vector3D	proj;
-	t_vector4D	view_v;
+	t_vector3d	proj;
+	t_vector4d	view_v;
 
 	(void)display_size;
-	view_v = ft_rotate_vector4D(v, cam_rot);
-	view_v = ft_translate_vector4D(view_v, ft_4Dto3D_vector(cam_pos));
+	view_v = ft_rotate_vector4d(v, cam_rot);
+	view_v = ft_translate_vector4d(view_v, ft_4dto3d_vector(cam_pos));
 	if (view_v.x == 0)
-		return (ft_set_vector3D(0, 0, 0));
+		return (ft_set_vector3d(0, 0, 0));
 	proj.x = view_v.y / view_v.x;
 	proj.y = view_v.z / view_v.x;
 	proj.z = 1;

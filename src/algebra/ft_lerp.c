@@ -13,9 +13,9 @@
 #include "ft_algebra.h"
 #include "ft_math.h"
 
-t_vector2D	ft_lerp2D(t_vector2D a, t_vector2D b, double lambda)
+t_vector2d	ft_lerp2d(t_vector2d a, t_vector2d b, double lambda)
 {
-	t_vector2D	lerp;
+	t_vector2d	lerp;
 
 	lambda = ft_clampf(lambda, 0, 1);
 	lerp.x = a.x * (1 - lambda) + b.x * lambda;
@@ -23,9 +23,9 @@ t_vector2D	ft_lerp2D(t_vector2D a, t_vector2D b, double lambda)
 	return (lerp);
 }
 
-t_vector3D	ft_lerp3D(t_vector3D a, t_vector3D b, double lambda)
+t_vector3d	ft_lerp3d(t_vector3d a, t_vector3d b, double lambda)
 {
-	t_vector3D	lerp;
+	t_vector3d	lerp;
 
 	lambda = ft_clampf(lambda, 0, 1);
 	lerp.x = a.x * (1 - lambda) + b.x * lambda;

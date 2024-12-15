@@ -12,9 +12,9 @@
 
 #include "ft_algebra.h"
 
-t_vector3D	ft_matrix_vector_product3D(double m[3][3], t_vector3D v)
+t_vector3d	ft_matrix_vector_product3d(double m[3][3], t_vector3d v)
 {
-	t_vector3D	prod;
+	t_vector3d	prod;
 
 	prod.x = v.x * m[0][0] + v.y * m[0][1] + v.z * m[0][2];
 	prod.y = v.x * m[1][0] + v.y * m[1][1] + v.z * m[1][2];
@@ -22,9 +22,9 @@ t_vector3D	ft_matrix_vector_product3D(double m[3][3], t_vector3D v)
 	return (prod);
 }
 
-t_vector4D	ft_matrix_vector_product4D(double m[4][4], t_vector4D v)
+t_vector4d	ft_matrix_vector_product4d(double m[4][4], t_vector4d v)
 {
-	t_vector4D	prod;
+	t_vector4d	prod;
 
 	prod.x = v.x * m[0][0] + v.y * m[0][1] + v.z * m[0][2] + v.w * m[0][3];
 	prod.y = v.x * m[1][0] + v.y * m[1][1] + v.z * m[1][2] + v.w * m[1][3];

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_add_matrixes3D(double a[3][3], double b[3][3], double sum[3][3])
+void	ft_add_matrixes3d(double a[3][3], double b[3][3], double sum[3][3])
 {
 	int	i;
 	int	j;
@@ -28,7 +28,7 @@ void	ft_add_matrixes3D(double a[3][3], double b[3][3], double sum[3][3])
 	}
 }
 
-void	ft_add_matrixes4D(double a[4][4], double b[4][4], double sum[4][4])
+void	ft_add_matrixes4d(double a[4][4], double b[4][4], double sum[4][4])
 {
 	int	i;
 	int	j;

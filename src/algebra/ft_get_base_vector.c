@@ -12,11 +12,11 @@
 
 #include "ft_algebra.h"
 
-t_vector2D	ft_get_base_vector2D(t_axis axis)
+t_vector2d	ft_get_base_vector2d(t_axis axis)
 {
-	t_vector2D	bv;
+	t_vector2d	bv;
 
-	bv = ft_init_vector2D(0);
+	bv = ft_init_vector2d(0);
 	if (axis != 0 && axis != 1)
 		return (bv);
 	if (axis == 0)
@@ -26,11 +26,11 @@ t_vector2D	ft_get_base_vector2D(t_axis axis)
 	return (bv);
 }
 
-t_vector3D	ft_get_base_vector3D(t_axis axis)
+t_vector3d	ft_get_base_vector3d(t_axis axis)
 {
-	t_vector3D	bv;
+	t_vector3d	bv;
 
-	bv = ft_init_vector3D(0);
+	bv = ft_init_vector3d(0);
 	if (axis != 0 && axis != 1 && axis != 2)
 		return (bv);
 	if (axis == 0)
@@ -42,7 +42,7 @@ t_vector3D	ft_get_base_vector3D(t_axis axis)
 	return (bv);
 }
 
-t_vector4D	ft_get_base_vector4D(t_axis axis)
+t_vector4d	ft_get_base_vector4d(t_axis axis)
 {
-	return (ft_3Dto4D_vector(ft_get_base_vector3D(axis)));
+	return (ft_3dto4d_vector(ft_get_base_vector3d(axis)));
 }

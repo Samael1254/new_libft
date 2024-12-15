@@ -12,18 +12,18 @@
 
 #include "ft_algebra.h"
 
-t_vector4D	ft_translate_vector4D(t_vector4D v, t_vector3D translator)
+t_vector4d	ft_translate_vector4d(t_vector4d v, t_vector3d translator)
 {
 	double	tm[4][4];
 
-	ft_set_translation_matrix4D(tm, translator);
-	return (ft_matrix_vector_product4D(tm, v));
+	ft_set_translation_matrix4d(tm, translator);
+	return (ft_matrix_vector_product4d(tm, v));
 }
 
-t_vector3D	ft_translate_vector3D(t_vector3D v, t_vector2D translator)
+t_vector3d	ft_translate_vector3d(t_vector3d v, t_vector2d translator)
 {
 	double	tm[3][3];
 
-	ft_set_translation_matrix3D(tm, translator);
-	return (ft_matrix_vector_product3D(tm, v));
+	ft_set_translation_matrix3d(tm, translator);
+	return (ft_matrix_vector_product3d(tm, v));
 }

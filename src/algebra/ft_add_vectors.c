@@ -12,27 +12,27 @@
 
 #include "ft_algebra.h"
 
-t_ivector2D	ft_add_ivectors2D(t_ivector2D a, t_ivector2D b)
+t_ivector2d	ft_add_ivectors2d(t_ivector2d a, t_ivector2d b)
 {
-	t_ivector2D	sum;
+	t_ivector2d	sum;
 
 	sum.x = a.x + b.x;
 	sum.y = a.y + b.y;
 	return (sum);
 }
 
-t_vector2D	ft_add_vectors2D(t_vector2D a, t_vector2D b)
+t_vector2d	ft_add_vectors2d(t_vector2d a, t_vector2d b)
 {
-	t_vector2D	sum;
+	t_vector2d	sum;
 
 	sum.x = a.x + b.x;
 	sum.y = a.y + b.y;
 	return (sum);
 }
 
-t_vector3D	ft_add_vectors3D(t_vector3D a, t_vector3D b)
+t_vector3d	ft_add_vectors3d(t_vector3d a, t_vector3d b)
 {
-	t_vector3D	sum;
+	t_vector3d	sum;
 
 	sum.x = a.x + b.x;
 	sum.y = a.y + b.y;
@@ -40,9 +40,9 @@ t_vector3D	ft_add_vectors3D(t_vector3D a, t_vector3D b)
 	return (sum);
 }
 
-t_vector4D	ft_add_vectors4D(t_vector4D a, t_vector4D b)
+t_vector4d	ft_add_vectors4d(t_vector4d a, t_vector4d b)
 {
-	t_vector4D	sum;
+	t_vector4d	sum;
 
 	sum.x = a.x + b.x;
 	sum.y = a.y + b.y;

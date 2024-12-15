@@ -12,12 +12,12 @@
 
 #include "ft_algebra.h"
 
-double	ft_dot_vectors2D(t_vector2D a, t_vector2D b)
+double	ft_dot_vectors2d(t_vector2d a, t_vector2d b)
 {
 	return (a.x * b.x + a.y * b.y);
 }
 
-double	ft_dot_vectors3D(t_vector3D a, t_vector3D b)
+double	ft_dot_vectors3d(t_vector3d a, t_vector3d b)
 {
 	return (a.x * b.x + a.y * b.y + a.z * b.z);
 }
