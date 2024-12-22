@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:49:08 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/19 15:20:24 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/12/22 14:12:55 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,8 @@ int					ft_list_is_sorted(t_list *begin_list, int (*cmp)(void *,
 							void *));
 // Returns the list element containing the smallest int
 t_list				*ft_int_list_min(t_list *begin_list);
+// Returns the list element containing the largest int
+t_list				*ft_int_list_max(t_list *begin_list);
 
 // Navigation
 

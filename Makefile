@@ -20,7 +20,8 @@ SRCS_LIST := ft_create_elem.c ft_delete_elem.c ft_int_array_to_list.c ft_list_at
 			  ft_list_merge.c ft_list_push_back.c ft_list_push_front.c ft_list_remove_if.c ft_list_reverse.c \
 			  ft_list_size.c ft_list_sort.c ft_list_to_int_array.c ft_list_to_str_array.c ft_sorted_list_insert.c \
 			  ft_sorted_list_merge.c ft_str_array_to_list.c ft_swap_elem.c ft_print_int_list.c ft_print_str_list.c \
-			  ft_print_int_list_reverse.c ft_int_list_min.c ft_list_index.c ft_list_find_index.c ft_list_at_end.c
+			  ft_print_int_list_reverse.c ft_int_list_min.c ft_list_index.c ft_list_find_index.c ft_list_at_end.c \
+			  ft_int_list_max.c
 
 SRCS_MATH := extremums.c ft_abs.c ft_factorial.c ft_fibonnaci.c ft_find_next_prime.c \
 			 ft_isprime.c ft_power.c ft_range.c ft_sqrt.c get_nblen_base.c \
