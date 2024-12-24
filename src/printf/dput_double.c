@@ -6,13 +6,12 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 21:28:19 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/22 22:46:57 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/12/23 22:18:32 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_math.h"
 #include "ft_printf_utils.h"
-#include <float.h>
 
 int	ft_putdouble_fd(double nb, int precision, int fd)
 {
