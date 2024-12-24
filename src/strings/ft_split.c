@@ -6,7 +6,7 @@
 /*   By: gfulconi <gfulconi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 13:57:11 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/05 16:12:55 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/12/24 13:20:03 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,19 @@ static int	next_word_len(char const *s, char c)
 	while (s[s_len] != c && s[s_len])
 		s_len++;
 	return (s_len);
+}
+
+static void	fill_line(char *dest, const char *src, int len)
+{
+	int	j;
+
+	j = 0;
+	while (j < len)
+	{
+		dest[j] = src[j];
+		j++;
+	}
+	dest[j] = '\0';
 }
 
 char	**ft_split(char const *s, char c)
@@ -43,25 +56,8 @@ char	**ft_split(char const *s, char c)
 		tab[i] = malloc(sizeof(char) * (s_len + 1));
 		if (!tab[i])
 			return (ft_free_strtab(tab), NULL);
-		ft_strncpy(tab[i++], s, s_len);
+		fill_line(tab[i++], s, s_len);
 		s += s_len;
 	}
 	return (tab[size] = 0, tab);
 }
-
-/*#include <stdio.h>
-int	main(int argc, char **argv)
-{
-	char	**tab;
-	int		size;
-
-	(void)argc;
-	size = count_words(argv[1], argv[2][0]);
-	tab = ft_split(argv[1], argv[2][0]);
-	printf("%d\n", size);
-	while (*tab)
-	{
-		printf("%s\n", *tab);
-		tab++;
-	}
-}*/
