@@ -6,10 +6,11 @@
 /*   By: gfulconi <gfulconi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 13:57:11 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/24 13:20:03 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/12/27 19:16:16 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_memory.h"
 #include "ft_strings.h"
 #include <stdlib.h>
 
@@ -33,7 +34,7 @@ static void	fill_line(char *dest, const char *src, int len)
 		dest[j] = src[j];
 		j++;
 	}
-	dest[j] = '\0';
+	dest[len] = '\0';
 }
 
 char	**ft_split(char const *s, char c)
@@ -44,7 +45,7 @@ char	**ft_split(char const *s, char c)
 	int		size;
 
 	size = ft_count_words((char *)s, c);
-	tab = malloc(sizeof(char *) * (size + 1));
+	tab = ft_calloc(size + 1, sizeof(char *));
 	if (!tab)
 		return (NULL);
 	i = 0;
@@ -53,11 +54,11 @@ char	**ft_split(char const *s, char c)
 		while (*s == c && *s)
 			s++;
 		s_len = next_word_len(s, c);
-		tab[i] = malloc(sizeof(char) * (s_len + 1));
+		tab[i] = ft_calloc(s_len + 1, sizeof(char));
 		if (!tab[i])
 			return (ft_free_strtab(tab), NULL);
 		fill_line(tab[i++], s, s_len);
 		s += s_len;
 	}
-	return (tab[size] = 0, tab);
+	return (tab[size] = NULL, tab);
 }

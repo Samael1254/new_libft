@@ -6,7 +6,7 @@
 /*   By: gfulconi <gfulconi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 16:30:03 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/20 10:50:57 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/12/27 19:07:49 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	j_str = malloc(sizeof(char) * (len + 1));
 	if (!j_str)
 		return (NULL);
-	*j_str = 0;
+	*j_str = '\0';
 	ft_strcat(j_str, (char *)s1);
 	ft_strcat(j_str, (char *)s2);
 	return (j_str);
