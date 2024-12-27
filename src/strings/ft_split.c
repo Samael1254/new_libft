@@ -6,7 +6,7 @@
 /*   By: gfulconi <gfulconi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 13:57:11 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/27 19:16:16 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/12/27 19:18:26 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	**ft_split(char const *s, char c)
 	int		size;
 
 	size = ft_count_words((char *)s, c);
-	tab = ft_calloc(size + 1, sizeof(char *));
+	tab = malloc((size + 1) * sizeof(char *));
 	if (!tab)
 		return (NULL);
 	i = 0;
@@ -54,7 +54,7 @@ char	**ft_split(char const *s, char c)
 		while (*s == c && *s)
 			s++;
 		s_len = next_word_len(s, c);
-		tab[i] = ft_calloc(s_len + 1, sizeof(char));
+		tab[i] = malloc((s_len + 1) * sizeof(char));
 		if (!tab[i])
 			return (ft_free_strtab(tab), NULL);
 		fill_line(tab[i++], s, s_len);
