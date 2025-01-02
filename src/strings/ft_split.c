@@ -6,11 +6,10 @@
 /*   By: gfulconi <gfulconi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 13:57:11 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/27 19:18:26 by gfulconi         ###   ########.fr       */
+/*   Updated: 2024/12/27 19:21:09 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_memory.h"
 #include "ft_strings.h"
 #include <stdlib.h>
 
