@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 01:01:41 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/27 17:50:43 by gfulconi         ###   ########.fr       */
+/*   Updated: 2025/01/09 12:09:35 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #include "ft_hashtable_utils.h"
 #include "ft_strings.h"
 #include <limits.h>
-#include <stdio.h>
 #include <stdlib.h>
 
 t_hashtable	*ft_ht_create(void)
