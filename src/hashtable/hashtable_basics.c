@@ -14,7 +14,6 @@
 #include "ft_hashtable_utils.h"
 #include "ft_strings.h"
 #include <limits.h>
-#include <stdio.h>
 #include <stdlib.h>
 
 t_hashtable	*ft_ht_create(void)
