@@ -6,14 +6,14 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:47:46 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/27 17:45:09 by gfulconi         ###   ########.fr       */
+/*   Updated: 2025/01/19 19:36:42 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_HASHTABLE_UTILS_H
 # define FT_HASHTABLE_UTILS_H
 
-# define INITIAL_SIZE 43
+# define INITIAL_SIZE 64
 
 # include "ft_hashtable.h"
 
