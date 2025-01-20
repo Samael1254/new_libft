@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 10:59:57 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/05 16:12:15 by gfulconi         ###   ########.fr       */
+/*   Updated: 2025/01/20 17:50:52 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,8 @@ char	*ft_strrchr(const char *s, int c);
 
 // Creates a new string containing the copy of another
 char	*ft_strdup(const char *s);
+// Creates a new string containing the fisrt n bytes of another at most
+char	*ft_strndup(const char *s, size_t n);
 // Creates a new string containing a portion of another string
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 
