@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 10:59:57 by gfulconi          #+#    #+#             */
-/*   Updated: 2025/01/22 11:52:11 by gfulconi         ###   ########.fr       */
+/*   Updated: 2025/01/22 13:05:56 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,13 @@ char	*ft_strchr(const char *s, int c);
 // Returns a pointer to the last occurence of a character in a string
 // (NULL if not found)
 char	*ft_strrchr(const char *s, int c);
+
+// Returns the number of characters in a row that are in the "accept"
+// charset sratring from s
+size_t	ft_strspn(const char *s, const char *accept);
+// Returns the number of characters in a row that are not in the "reject"
+// charset sratring from s
+size_t	ft_strcspn(const char *s, const char *reject);
 
 // Creates a new string containing the copy of another
 char	*ft_strdup(const char *s);

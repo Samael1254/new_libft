@@ -1,5 +1,5 @@
 #include "ft_chars.h"
-#include "ft_printf.h"
+#include "ft_strings.h"
 #include <stdlib.h>
 
 char	*ft_strtok(char *str, const char *delim)
@@ -10,14 +10,10 @@ char	*ft_strtok(char *str, const char *delim)
 
 	if (str)
 		start = str;
-	while (*start && ft_get_char_index(*start, delim) != -1)
-		start++;
+	start += ft_strspn(start, delim);
 	if (*start == '\0')
 		return (NULL);
-	i = 0;
-	while (start[i] && ft_get_char_index(start[i], delim) == -1)
-		i++;
-	token = malloc((i + 1) * sizeof(char));
+	token = malloc((ft_strcspn(start, delim) + 1) * sizeof(char));
 	if (!token)
 		return (NULL);
 	i = 0;
