@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 10:59:57 by gfulconi          #+#    #+#             */
-/*   Updated: 2025/01/20 17:50:52 by gfulconi         ###   ########.fr       */
+/*   Updated: 2025/01/22 11:52:11 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,8 @@ char	*ft_strdup(const char *s);
 char	*ft_strndup(const char *s, size_t n);
 // Creates a new string containing a portion of another string
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+// Creates a string containing the next token defined by the given delimiters
+char	*ft_strtok(char *str, const char *delim);
 
 // Returns a pointer to the first occurence of a string inside another one
 // (NULL if not found)
