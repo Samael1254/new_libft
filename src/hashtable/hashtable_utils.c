@@ -6,12 +6,13 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 01:01:36 by gfulconi          #+#    #+#             */
-/*   Updated: 2025/01/09 12:09:09 by gfulconi         ###   ########.fr       */
+/*   Updated: 2025/01/27 16:44:08 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_hashtable.h"
 #include "ft_hashtable_utils.h"
+#include "ft_memory.h"
 #include "ft_strings.h"
 #include <stdlib.h>
 
@@ -35,7 +36,7 @@ t_hashtable	*ft_ht_resize(t_hashtable *ht)
 	unsigned int	j;
 
 	old_table = ht->table;
-	ht->table = malloc((2 * ht->size) * sizeof(t_ht_item));
+	ht->table = ft_calloc((2 * ht->size), sizeof(t_ht_item));
 	if (!ht->table)
 		return (NULL);
 	i = 0;
@@ -57,23 +58,16 @@ t_hashtable	*ft_ht_resize(t_hashtable *ht)
 
 t_hashtable	*ft_ht_create_advanced(unsigned int size, unsigned int load)
 {
-	t_hashtable		*ht;
-	unsigned int	i;
+	t_hashtable	*ht;
 
 	ht = malloc(sizeof(t_hashtable));
 	if (!ht)
 		return (NULL);
 	ht->size = size;
 	ht->load = load;
-	ht->table = malloc(size * sizeof(t_ht_item));
+	ht->table = ft_calloc(size, sizeof(t_ht_item));
 	if (!ht->table)
 		return (free(ht), NULL);
-	i = 0;
-	while (i < size)
-	{
-		ht->table[i].key = NULL;
-		ht->table[i++].data = NULL;
-	}
 	return (ht);
 }
 
