@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:49:08 by gfulconi          #+#    #+#             */
-/*   Updated: 2025/01/27 11:42:33 by gfulconi         ###   ########.fr       */
+/*   Updated: 2025/01/27 14:49:31 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ t_list				*ft_list_map(t_list *lst, void *(*f)(void *),
 // Inserts an element containing given data to the back of the list
 int					ft_list_push_back(t_list **begin_list, void *data);
 // Inserts an element containing given data to the front of the list
-void				ft_list_push_front(t_list **begin_list, void *data);
+int					ft_list_push_front(t_list **begin_list, void *data);
 // Inserts an element containing given data at a given index of the list
 void				ft_list_insert(t_list **begin_list, void *data,
 						unsigned int index);
