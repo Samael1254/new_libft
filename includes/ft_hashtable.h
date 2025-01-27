@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:47:46 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/27 17:14:48 by gfulconi         ###   ########.fr       */
+/*   Updated: 2025/01/20 18:29:43 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,8 @@ void					ft_ht_clear_data(t_hashtable *ht, void (*del)(void *));
 void					ft_ht_print_debug(t_hashtable *ht, char type);
 // Returns an array containing the keys of the hashtable
 char					**ft_ht_keys(t_hashtable *ht);
+// Returns an array containing all the data void pointers of the hashtable
+void					**ft_ht_data(t_hashtable *ht);
 // Returns the load factor of the hashtable
 float					ft_ht_load_factor(t_hashtable *ht);
 // Checks if the hashtable contains the given key

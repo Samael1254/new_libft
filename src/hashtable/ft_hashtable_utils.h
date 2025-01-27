@@ -13,7 +13,7 @@
 #ifndef FT_HASHTABLE_UTILS_H
 # define FT_HASHTABLE_UTILS_H
 
-# define INITIAL_SIZE 128
+# define INITIAL_SIZE 64
 
 # include "ft_hashtable.h"
 

@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 01:01:41 by gfulconi          #+#    #+#             */
-/*   Updated: 2025/01/09 12:09:35 by gfulconi         ###   ########.fr       */
+/*   Updated: 2025/01/19 19:36:23 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 t_hashtable	*ft_ht_create(void)
 {
-	return (ft_ht_create_advanced(7, 0));
+	return (ft_ht_create_advanced(INITIAL_SIZE, 0));
 }
 
 void	ft_ht_destroy(t_hashtable *ht)

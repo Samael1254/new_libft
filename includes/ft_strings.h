@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 10:59:57 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/05 16:12:15 by gfulconi         ###   ########.fr       */
+/*   Updated: 2025/01/22 13:05:56 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,21 @@ char	*ft_strchr(const char *s, int c);
 // (NULL if not found)
 char	*ft_strrchr(const char *s, int c);
 
+// Returns the number of characters in a row that are in the "accept"
+// charset sratring from s
+size_t	ft_strspn(const char *s, const char *accept);
+// Returns the number of characters in a row that are not in the "reject"
+// charset sratring from s
+size_t	ft_strcspn(const char *s, const char *reject);
+
 // Creates a new string containing the copy of another
 char	*ft_strdup(const char *s);
+// Creates a new string containing the fisrt n bytes of another at most
+char	*ft_strndup(const char *s, size_t n);
 // Creates a new string containing a portion of another string
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+// Creates a string containing the next token defined by the given delimiters
+char	*ft_strtok(char *str, const char *delim);
 
 // Returns a pointer to the first occurence of a string inside another one
 // (NULL if not found)
