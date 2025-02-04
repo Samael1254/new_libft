@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 10:59:57 by gfulconi          #+#    #+#             */
-/*   Updated: 2025/01/22 13:05:56 by gfulconi         ###   ########.fr       */
+/*   Updated: 2025/02/04 14:33:31 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,8 @@ char	**ft_split(char const *s, char c);
 int		ft_count_words(char *s, char sep);
 // Frees a table of strings
 void	ft_free_strtab(char **tab);
+// Returns the size of an array of strings
+int		ft_strtab_size(char **tab);
 
 // Calls a function for every character of a string
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
