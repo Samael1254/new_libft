@@ -41,7 +41,7 @@ char	*ft_str_addchar(char *str, char c);
 // Creates a new string from appending a string to another
 char	*ft_strjoin(char const *s1, char const *s2);
 // Creates a new string from appending all strings from a tab next to eachother
-char	*ft_strjoin_tab(int size, char **strs, char *sep);
+char	*ft_strjoin_tab(char **strs, char *sep);
 
 // Returns a pointer to the first occurence of a character in a string
 // (NULL if not found)
