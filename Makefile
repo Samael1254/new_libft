@@ -38,7 +38,7 @@ SRCS_STRINGS := ft_split.c ft_str_addchar.c ft_strcat.c ft_strchr.c ft_strcmp.c 
 				ft_strjoin_tab.c ft_strlen.c ft_strmapi.c ft_strncat.c ft_strncmp.c \
 				ft_strncpy.c ft_strnstr.c ft_strrchr.c ft_strstr.c ft_strtrim.c \
 				ft_substr.c get_char_index.c ft_free_strtab.c ft_count_words.c ft_strndup.c \
-				ft_strtok.c ft_strspn.c ft_strcspn.c ft_strtab_size.c
+				ft_strtok.c ft_strspn.c ft_strcspn.c ft_strtab_size.c ft_strsurround.c
 
 SRCS_PRINTF := ft_printf.c ft_dprintf.c ft_vdprintf.c dprintf_arg_attributes.c dprintf_padding.c dprintf_params.c \
 			   dprintf_printarg.c dprintf_modify_len.c dput_misc.c dput_int.c dput_double.c

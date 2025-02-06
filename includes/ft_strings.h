@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 10:59:57 by gfulconi          #+#    #+#             */
-/*   Updated: 2025/02/04 14:33:31 by gfulconi         ###   ########.fr       */
+/*   Updated: 2025/02/06 11:08:37 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,9 +73,12 @@ char	*ft_strstr(char *str, char *to_find);
 // string inside another one (NULL if not found)
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 
-// Creates a new string from deleting the characters contained in set around
+// Creates a new string by deleting the characters contained in set around
 // a given string
 char	*ft_strtrim(char const *s1, char const *set);
+// Creates a new string by surrounding the given string by the surround
+// string in a symetric way
+char	*ft_strsurround(char *str, char *surround);
 
 // Creates a tab of strings from splitting a string at every separator
 char	**ft_split(char const *s, char c);
