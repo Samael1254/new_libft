@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 01:01:56 by gfulconi          #+#    #+#             */
-/*   Updated: 2025/01/09 12:08:42 by gfulconi         ###   ########.fr       */
+/*   Updated: 2025/02/06 12:00:55 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,11 @@ void	ft_ht_clear_data(t_hashtable *ht, void (*del)(void *))
 
 	i = 0;
 	while (i < ht->size)
-		(*del)(ht->table[i++].data);
+	{
+		if (ht->table[i].key)
+			(*del)(ht->table[i].data);
+		i++;
+	}
 }
 
 void	ft_ht_print_debug(t_hashtable *ht, char type)
