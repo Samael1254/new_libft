@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 10:59:42 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/20 10:49:03 by gfulconi         ###   ########.fr       */
+/*   Updated: 2025/02/12 13:24:26 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_str_addchar(char *str, char c)
 	char	*new_str;
 	size_t	i;
 
+	if (!str)
+		return (NULL);
 	new_str = malloc((ft_strlen(str) + 2) * sizeof(char));
 	if (!new_str)
 		return (free(str), NULL);
