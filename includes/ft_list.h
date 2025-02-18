@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:49:08 by gfulconi          #+#    #+#             */
-/*   Updated: 2025/02/18 13:29:43 by gfulconi         ###   ########.fr       */
+/*   Updated: 2025/02/18 13:46:03 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,12 @@ typedef struct s_list
 
 // Creates a single list element
 t_list				*ft_create_elem(void *data);
-// Creates a full  deep copy of a list
+// Creates a full deep copy of a list
 t_list				*ft_list_deep_cpy(t_list *src, void *(*dup_fct)(void *),
 						void (*free_fct)(void *));
+// Creates a shallow copy of a list that points to the same data as the
+// original
+t_list				*ft_list_shallow_copy(t_list *begin_list);
 // Creates a list by applying a given function to every element of a given list
 t_list				*ft_list_map(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
