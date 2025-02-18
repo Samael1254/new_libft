@@ -15,7 +15,7 @@ SRCS_CONVERSION := ft_atoi_base.c ft_atoi.c ft_check_base_errors.c ft_convert_ba
 SRCS_GET_NEXT_LINE := get_next_line.c get_next_line_utils.c
 
 SRCS_LIST := ft_create_elem.c ft_delete_elem.c ft_int_array_to_list.c ft_list_at.c ft_list_clear.c \
-			  ft_list_clear_from.c ft_list_clone.c ft_list_cpy.c ft_list_delete_at.c ft_list_find.c \
+			  ft_list_clear_from.c ft_list_shallow_cpy.c ft_list_deep_cpy.c ft_list_delete_at.c ft_list_find.c \
 			  ft_list_foreach.c ft_list_foreach_if.c ft_list_is_sorted.c ft_list_last.c ft_list_map.c \
 			  ft_list_merge.c ft_list_push_back.c ft_list_push_front.c ft_list_remove_if.c ft_list_reverse.c \
 			  ft_list_size.c ft_list_sort.c ft_list_to_int_array.c ft_list_to_str_array.c ft_sorted_list_insert.c \
