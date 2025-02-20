@@ -7,7 +7,7 @@ int	ft_bntree_level_count(t_bntree *root)
 	int	count_right;
 
 	if (!root->left && !root->right)
-		return (1);
+		return (0);
 	count_left = 0;
 	count_right = 0;
 	if (root->left)

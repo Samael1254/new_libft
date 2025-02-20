@@ -56,7 +56,7 @@ SRCS_ALGEBRA := ft_add_matrixes.c ft_add_vectors.c ft_are_vectors_col.c ft_are_v
 				ft_plane_projection.c
 
 SRCS_BTREE := ft_bntree_create_node.c ft_bntree_apply_prefix.c ft_bntree_apply_infix.c ft_bntree_apply_suffix.c ft_bntree_insert.c \
-			  ft_bntree_search.c ft_bntree_level_count.c
+			  ft_bntree_search.c ft_bntree_level_count.c ft_bntree_delete_node.c ft_bntree_clear.c
 
 SOURCES := $(addprefix $(SOURCES_DIR)chars/, $(SRCS_CHARS)) $(addprefix $(SOURCES_DIR)conversion/, $(SRCS_CONVERSION)) \
 		   $(addprefix $(SOURCES_DIR)get_next_line/, $(SRCS_GET_NEXT_LINE)) $(addprefix $(SOURCES_DIR)lists/, $(SRCS_LIST)) \
