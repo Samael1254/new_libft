@@ -55,12 +55,15 @@ SRCS_ALGEBRA := ft_add_matrixes.c ft_add_vectors.c ft_are_vectors_col.c ft_are_v
 				ft_print_matrix.c ft_oblique_projection.c ft_perspective_projection.c ft_rotate_vector.c ft_translate_vector.c \
 				ft_plane_projection.c
 
+SRCS_BTREE := ft_bntree_create_node.c ft_bntree_apply_prefix.c ft_bntree_apply_infix.c ft_bntree_apply_suffix.c ft_bntree_insert.c \
+			  ft_bntree_search.c ft_bntree_level_count.c
+
 SOURCES := $(addprefix $(SOURCES_DIR)chars/, $(SRCS_CHARS)) $(addprefix $(SOURCES_DIR)conversion/, $(SRCS_CONVERSION)) \
 		   $(addprefix $(SOURCES_DIR)get_next_line/, $(SRCS_GET_NEXT_LINE)) $(addprefix $(SOURCES_DIR)lists/, $(SRCS_LIST)) \
 		   $(addprefix $(SOURCES_DIR)math/, $(SRCS_MATH)) $(addprefix $(SOURCES_DIR)memory/, $(SRCS_MEMORY)) \
 		   $(addprefix $(SOURCES_DIR)sorts/, $(SRCS_SORTS)) $(addprefix $(SOURCES_DIR)strings/, $(SRCS_STRINGS)) \
 		   $(addprefix $(SOURCES_DIR)printf/, $(SRCS_PRINTF)) $(addprefix $(SOURCES_DIR)hashtable/, $(SRCS_HASHTABLE)) \
-		   $(addprefix $(SOURCES_DIR)algebra/, $(SRCS_ALGEBRA))
+		   $(addprefix $(SOURCES_DIR)algebra/, $(SRCS_ALGEBRA)) $(addprefix $(SOURCES_DIR)btree/, $(SRCS_BTREE))
 
 OBJECTS = $(addprefix $(BUILD_DIR), $(notdir $(SOURCES:.c=.o)))
 
