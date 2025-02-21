@@ -1,4 +1,7 @@
-#include "ft_list.h"
+#ifndef FT_QUEUE_H
+# define FT_QUEUE_H
+
+# include "ft_list.h"
 
 typedef struct s_queue
 {
@@ -15,4 +18,6 @@ void		*ft_dequeue(t_queue *queue, void (*free_fct)(void *));
 // Checks if a queue is empty, and returns -1 if it is invalid
 int			ft_is_queue_empty(t_queue *queue);
 // Clears a queue and all its data
-void		ft_clear_queue(t_queue *queue, void (*free_fct)(void *));
+void		ft_queue_clear(t_queue *queue, void (*free_fct)(void *));
+
+#endif

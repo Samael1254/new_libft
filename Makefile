@@ -58,7 +58,9 @@ SRCS_ALGEBRA := ft_add_matrixes.c ft_add_vectors.c ft_are_vectors_col.c ft_are_v
 SRCS_BTREE := ft_bntree_create_node.c ft_bntree_apply_prefix.c ft_bntree_apply_infix.c ft_bntree_apply_suffix.c ft_bntree_insert.c \
 			  ft_bntree_search.c ft_bntree_level_count.c ft_bntree_delete_node.c ft_bntree_clear.c
 
-SRCS_QUEUE := ft_create_queue.c ft_clear_queue.c ft_enqueue.c ft_dequeue.c ft_is_queue_empty.c
+SRCS_QUEUE := ft_create_queue.c ft_queue_clear.c ft_enqueue.c ft_dequeue.c ft_is_queue_empty.c
+
+SRCS_STACK := ft_create_stack.c ft_stack_clear.c ft_stack_push.c ft_stack_pop.c
 
 SOURCES := $(addprefix $(SOURCES_DIR)chars/, $(SRCS_CHARS)) $(addprefix $(SOURCES_DIR)conversion/, $(SRCS_CONVERSION)) \
 		   $(addprefix $(SOURCES_DIR)get_next_line/, $(SRCS_GET_NEXT_LINE)) $(addprefix $(SOURCES_DIR)lists/, $(SRCS_LIST)) \
@@ -66,7 +68,7 @@ SOURCES := $(addprefix $(SOURCES_DIR)chars/, $(SRCS_CHARS)) $(addprefix $(SOURCE
 		   $(addprefix $(SOURCES_DIR)sorts/, $(SRCS_SORTS)) $(addprefix $(SOURCES_DIR)strings/, $(SRCS_STRINGS)) \
 		   $(addprefix $(SOURCES_DIR)printf/, $(SRCS_PRINTF)) $(addprefix $(SOURCES_DIR)hashtable/, $(SRCS_HASHTABLE)) \
 		   $(addprefix $(SOURCES_DIR)algebra/, $(SRCS_ALGEBRA)) $(addprefix $(SOURCES_DIR)btree/, $(SRCS_BTREE)) \
-		   $(addprefix $(SOURCES_DIR)queue/, $(SRCS_QUEUE))
+		   $(addprefix $(SOURCES_DIR)queue/, $(SRCS_QUEUE)) $(addprefix $(SOURCES_DIR)stack/, $(SRCS_STACK))
 
 OBJECTS = $(addprefix $(BUILD_DIR), $(notdir $(SOURCES:.c=.o)))
 

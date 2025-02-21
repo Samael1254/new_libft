@@ -3,8 +3,8 @@
 
 void	*ft_dequeue(t_queue *queue, void (*free_fct)(void *))
 {
-	void	*removed_data;
 	t_list	*removed_node;
+	void	*removed_data;
 
 	removed_node = queue->front;
 	removed_data = removed_node->data;

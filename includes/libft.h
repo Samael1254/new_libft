@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/17 17:18:13 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/11 15:44:55 by gfulconi         ###   ########.fr       */
+/*   Updated: 2025/02/21 15:06:04 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@
 # include "ft_math.h"
 # include "ft_memory.h"
 # include "ft_printf.h"
+# include "ft_queue.h"
 # include "ft_sorts.h"
+# include "ft_stack.h"
 # include "ft_strings.h"
 # include "get_next_line.h"
 
