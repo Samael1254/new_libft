@@ -82,6 +82,8 @@ char	*ft_strsurround(char *str, char *surround);
 
 // Creates a tab of strings from splitting a string at every separator
 char	**ft_split(char const *s, char c);
+// Creates a tab of strings from splitting a string at every separator present in charset
+char	**ft_split_charset(char const *s, char *charset);
 // Counts the number of words in a string separated by a given character
 int		ft_count_words(char *s, char sep);
 // Frees a table of strings

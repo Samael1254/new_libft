@@ -33,12 +33,12 @@ SRCS_MEMORY := ft_bzero.c ft_calloc.c ft_memchr.c ft_memcmp.c ft_memcpy.c \
 
 SRCS_SORTS := bubble_sort_int.c merge_sort_int.c selection_sort.c swap_int.c
 
-SRCS_STRINGS := ft_split.c ft_str_addchar.c ft_strcat.c ft_strchr.c ft_strcmp.c \
+SRCS_STRINGS := ft_split.c ft_split_charset.c ft_str_addchar.c ft_strcat.c ft_strchr.c ft_strcmp.c \
 				ft_strcpy.c ft_strdup.c ft_str_is_number.c ft_striteri.c ft_strjoin.c \
 				ft_strjoin_tab.c ft_strlen.c ft_strmapi.c ft_strncat.c ft_strncmp.c \
 				ft_strncpy.c ft_strnstr.c ft_strrchr.c ft_strstr.c ft_strtrim.c \
 				ft_substr.c get_char_index.c ft_free_strtab.c ft_count_words.c ft_strndup.c \
-				ft_strtok.c ft_strspn.c ft_strcspn.c ft_strtab_size.c ft_strsurround.c
+				ft_strtok.c ft_strspn.c ft_strcspn.c ft_strtab_size.c ft_strsurround.c \
 
 SRCS_PRINTF := ft_printf.c ft_dprintf.c ft_vdprintf.c dprintf_arg_attributes.c dprintf_padding.c dprintf_params.c \
 			   dprintf_printarg.c dprintf_modify_len.c dput_misc.c dput_int.c dput_double.c
