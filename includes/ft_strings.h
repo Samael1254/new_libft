@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 10:59:57 by gfulconi          #+#    #+#             */
-/*   Updated: 2025/02/06 11:08:37 by gfulconi         ###   ########.fr       */
+/*   Updated: 2025/03/05 13:29:48 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,8 @@ char	*ft_strsurround(char *str, char *surround);
 
 // Creates a tab of strings from splitting a string at every separator
 char	**ft_split(char const *s, char c);
-// Creates a tab of strings from splitting a string at every separator present in charset
+// Creates a tab of strings from splitting a string at every separator
+// present in charset
 char	**ft_split_charset(char const *s, char *charset);
 // Counts the number of words in a string separated by a given character
 int		ft_count_words(char *s, char sep);
