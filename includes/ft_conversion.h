@@ -18,6 +18,9 @@ int		ft_atoi(const char *nptr);
 // Converts an integer to a string
 char	*ft_itoa(int nb);
 
+// Converts a string to a double
+double	ft_atod(const char *nptr);
+
 // Converts a string to an integer in the specified base
 int		ft_atoi_base(char *str, char *base);
 // Converts an integer in the specified base to a string

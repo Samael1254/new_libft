@@ -10,7 +10,7 @@ SRCS_CHARS := ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isincharset
 			  ft_isprint.c ft_isspace.c ft_tolower.c ft_toupper.c ft_get_char_index.c
 
 SRCS_CONVERSION := ft_atoi_base.c ft_atoi.c ft_check_base_errors.c ft_convert_base.c ft_itoa_base.c \
-				   ft_itoa.c
+				   ft_itoa.c ft_atod.c
 
 SRCS_GET_NEXT_LINE := get_next_line.c get_next_line_utils.c
 
