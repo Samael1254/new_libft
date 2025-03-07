@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:27:40 by gfulconi          #+#    #+#             */
-/*   Updated: 2025/01/09 12:55:19 by gfulconi         ###   ########.fr       */
+/*   Updated: 2025/03/07 13:45:24 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,11 +72,11 @@ t_vector4d	ft_sub_vectors4d(t_vector4d a, t_vector4d b);
 // SCALE
 
 // Computes the scaling of a 2d vector by lambda
-t_vector2d	ft_scale_vector2d(int lambda, t_vector2d a);
+t_vector2d	ft_scale_vector2d(double lambda, t_vector2d a);
 // Computes the scaling of a 3d vector by lambda
-t_vector3d	ft_scale_vector3d(int lambda, t_vector3d a);
+t_vector3d	ft_scale_vector3d(double lambda, t_vector3d a);
 // Computes the scaling of a 4d vector by lambda
-t_vector4d	ft_scale_vector4d(int lambda, t_vector4d a);
+t_vector4d	ft_scale_vector4d(double lambda, t_vector4d a);
 
 // NORM
 

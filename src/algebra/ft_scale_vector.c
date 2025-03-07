@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:27:38 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/11 16:06:18 by gfulconi         ###   ########.fr       */
+/*   Updated: 2025/03/07 13:45:01 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ t_ivector2d	ft_scale_ivector2d(int lambda, t_ivector2d a)
 	return (scaled);
 }
 
-t_vector2d	ft_scale_vector2d(int lambda, t_vector2d a)
+t_vector2d	ft_scale_vector2d(double lambda, t_vector2d a)
 {
 	t_vector2d	scaled;
 
@@ -30,7 +30,7 @@ t_vector2d	ft_scale_vector2d(int lambda, t_vector2d a)
 	return (scaled);
 }
 
-t_vector3d	ft_scale_vector3d(int lambda, t_vector3d a)
+t_vector3d	ft_scale_vector3d(double lambda, t_vector3d a)
 {
 	t_vector3d	scaled;
 
@@ -40,7 +40,7 @@ t_vector3d	ft_scale_vector3d(int lambda, t_vector3d a)
 	return (scaled);
 }
 
-t_vector4d	ft_scale_vector4d(int lambda, t_vector4d a)
+t_vector4d	ft_scale_vector4d(double lambda, t_vector4d a)
 {
 	t_vector4d	scaled;
 

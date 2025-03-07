@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:50:28 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/15 16:15:21 by gfulconi         ###   ########.fr       */
+/*   Updated: 2025/03/07 13:58:38 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,9 @@ int			ft_clamp(int value, int min, int max);
 int			ft_array_min(int *array, int size);
 // Returns the biggest value inside an array of integers
 int			ft_array_max(int *array, int size);
+
+int			ft_in_range(int value, int min, int max);
+int			ft_in_rangef(double value, double min, double max);
 
 // Returns the smallest of two doubles
 double		ft_minf(double a, double b);
