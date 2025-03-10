@@ -5,5 +5,8 @@ int	ft_in_range(int value, int min, int max)
 
 int	ft_in_rangef(double value, double min, double max)
 {
-	return (value >= min && value <= max);
+	double	epsilon;
+
+	epsilon = 1e-6;
+	return (value >= min - epsilon && value <= max + epsilon);
 }
