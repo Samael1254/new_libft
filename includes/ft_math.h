@@ -46,12 +46,16 @@ int			ft_array_max(int *array, int size);
 int			ft_in_range(int value, int min, int max);
 int			ft_in_rangef(double value, double min, double max);
 
+// Returns the absolute value of a double
+double		ft_absf(double nb);
 // Returns the smallest of two doubles
 double		ft_minf(double a, double b);
 // Returns the biggest of two doubles
 double		ft_maxf(double a, double b);
 // Returns the double value bound between min and max
 double		ft_clampf(double value, double min, double max);
+// Compare two doubles with an error margin
+int			ft_equalf(double value1, double value2);
 
 // Returns the number of characters (sign and digits) of a signed number
 // written is a specific base
