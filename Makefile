@@ -26,7 +26,7 @@ SRCS_LIST := ft_create_elem.c ft_delete_elem.c ft_int_array_to_list.c ft_list_at
 SRCS_MATH := extremums.c ft_abs.c ft_factorial.c ft_fibonnaci.c ft_find_next_prime.c \
 			 ft_isprime.c ft_power.c ft_range.c ft_sqrt.c get_nblen_base.c \
 			 ft_truncate.c ft_round.c ft_get_exponent.c ft_powerf.c extremumsf.c \
-			 ft_doublelen.c ft_in_range.c ft_absf.c ft_equalf.c
+			 ft_doublelen.c ft_in_range.c ft_absf.c ft_equalf.c ft_lerp.c
 
 SRCS_MEMORY := ft_bzero.c ft_calloc.c ft_memchr.c ft_memcmp.c ft_memcpy.c \
 			   ft_memmove.c ft_memset.c

@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:50:28 by gfulconi          #+#    #+#             */
-/*   Updated: 2025/03/07 13:58:38 by gfulconi         ###   ########.fr       */
+/*   Updated: 2025/03/11 11:59:16 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,9 @@ double		ft_maxf(double a, double b);
 double		ft_clampf(double value, double min, double max);
 // Compare two doubles with an error margin
 int			ft_equalf(double value1, double value2);
+
+// Lerps between two doubles
+double		ft_lerp(double min, double max, double lambda);
 
 // Returns the number of characters (sign and digits) of a signed number
 // written is a specific base
