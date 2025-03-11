@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:50:28 by gfulconi          #+#    #+#             */
-/*   Updated: 2025/03/11 15:07:11 by gfulconi         ###   ########.fr       */
+/*   Updated: 2025/03/11 15:15:23 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FT_MATH_H
 
 # define PI 3.141592653589793
+# define EPSILON 1e-7
 
 // Calculates the term index of the Fibonnaci sequence
 int			ft_fibonacci(int index);

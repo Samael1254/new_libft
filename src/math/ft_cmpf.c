@@ -2,23 +2,17 @@
 
 int	ft_equalf(double value1, double value2)
 {
-	const double	epsilon = 1e-6;
-
-	return (ft_absf(value1 - value2) <= epsilon);
+	return (ft_absf(value1 - value2) <= EPSILON);
 }
 
 int	ft_supf(double value1, double value2)
 {
-	const double	epsilon = 1e-6;
-
-	return (value1 >= value2 - epsilon);
+	return (value1 >= value2 - EPSILON);
 }
 
 int	ft_inff(double value1, double value2)
 {
-	const double	epsilon = 1e-6;
-
-	return (value1 <= value2 + epsilon);
+	return (value1 <= value2 + EPSILON);
 }
 
 int	ft_in_rangef(double value, double min, double max)
