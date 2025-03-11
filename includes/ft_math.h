@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 11:50:28 by gfulconi          #+#    #+#             */
-/*   Updated: 2025/03/11 12:57:25 by gfulconi         ###   ########.fr       */
+/*   Updated: 2025/03/11 15:07:11 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,6 @@ int			ft_array_min(int *array, int size);
 // Returns the biggest value inside an array of integers
 int			ft_array_max(int *array, int size);
 
-int			ft_in_range(int value, int min, int max);
-int			ft_in_rangef(double value, double min, double max);
-
 // Returns the absolute value of a double
 double		ft_absf(double nb);
 // Returns the smallest of two doubles
@@ -56,6 +53,10 @@ double		ft_maxf(double a, double b);
 double		ft_clampf(double value, double min, double max);
 // Compare two doubles with an error margin
 int			ft_equalf(double value1, double value2);
+int			ft_supf(double value1, double value2);
+int			ft_inff(double value1, double value2);
+int			ft_in_range(int value, int min, int max);
+int			ft_in_rangef(double value, double min, double max);
 
 // Lerps between two doubles
 double		ft_lerpf(double min, double max, double lambda);
