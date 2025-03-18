@@ -1,5 +1,5 @@
-#include "ft_strings.h"
 #include "ft_conversion.h"
+#include "ft_strings.h"
 
 /*
  * returns a double from a string, returns 0 on error
@@ -17,7 +17,7 @@ double	ft_atod(const char *nptr)
 	if (!ptr_dot)
 		return (integer);
 	decimal = (double)ft_atoi(ptr_dot + 1);
-	decimal_len = ft_strlen(ptr_dot + 1);
+	decimal_len = ft_strspn(ptr_dot + 1, "0123456789");
 	while (decimal_len--)
 		decimal /= 10;
 	return (integer + decimal);
