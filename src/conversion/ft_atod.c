@@ -24,5 +24,7 @@ double	ft_atod(const char *nptr)
 		return (integer);
 	decimal = (double)ft_atoi(ptr_dot + 1);
 	decimal /= ft_powerf(10, ft_strspn(ptr_dot + 1, "0123456789"));
+	if (integer == 0)
+		integer *= sign;
 	return (integer + sign * decimal);
 }
