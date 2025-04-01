@@ -12,9 +12,9 @@
 
 #include "ft_algebra.h"
 
-t_vector2d	ft_direction_vector2d(t_vector3d line)
+t_vec2	ft_direction_vec2(t_vec3 line)
 {
-	t_vector2d	dir;
+	t_vec2	dir;
 
 	dir.x = -line.y;
 	dir.y = line.x;

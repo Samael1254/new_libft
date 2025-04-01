@@ -12,17 +12,17 @@
 
 #include "ft_algebra.h"
 
-void	ft_set_stretching_matrix3d(double m[3][3], t_vector3d s)
+void	ft_set_stretching_mat3(double m[3][3], t_vec3 s)
 {
-	ft_set_null_matrix3d(m);
+	ft_set_null_mat3(m);
 	m[0][0] = s.x;
 	m[1][1] = s.y;
 	m[2][2] = s.z;
 }
 
-void	ft_set_stretching_matrix4d(double m[4][4], t_vector4d s)
+void	ft_set_stretching_mat4(double m[4][4], t_vec4 s)
 {
-	ft_set_null_matrix4d(m);
+	ft_set_null_mat4(m);
 	m[0][0] = s.x;
 	m[1][1] = s.y;
 	m[2][2] = s.z;

@@ -12,9 +12,9 @@
 
 #include "ft_algebra.h"
 
-t_vector3d	ft_plane_projection(t_vector4d v, t_axis normal)
+t_vec3	ft_plane_projection(t_vec4 v, t_axis normal)
 {
-	t_vector3d	proj;
+	t_vec3	proj;
 
 	if (normal == X_AXIS)
 	{

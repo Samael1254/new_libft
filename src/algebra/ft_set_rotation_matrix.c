@@ -13,18 +13,18 @@
 #include "ft_algebra.h"
 #include <math.h>
 
-void	ft_set_base_rotation_matrix2d(double m[2][2], double angle)
+void	ft_set_base_rotation_mat2(double m[2][2], double angle)
 {
-	ft_set_null_matrix2d(m);
+	ft_set_null_mat2(m);
 	m[0][0] = cos(angle);
 	m[1][0] = sin(angle);
 	m[0][1] = -sin(angle);
 	m[1][1] = cos(angle);
 }
 
-void	ft_set_base_rotation_matrix3d(double m[3][3], double angle, t_axis axis)
+void	ft_set_base_rotation_mat3(double m[3][3], double angle, t_axis axis)
 {
-	ft_set_null_matrix3d(m);
+	ft_set_null_mat3(m);
 	m[axis][axis] = 1;
 	m[(axis + 1) % 3][(axis + 1) % 3] = cos(angle);
 	m[(axis + 2) % 3][(axis + 2) % 3] = cos(angle);
@@ -32,15 +32,15 @@ void	ft_set_base_rotation_matrix3d(double m[3][3], double angle, t_axis axis)
 	m[(axis + 2) % 3][(axis + 1) % 3] = sin(angle);
 }
 
-void	ft_set_base_rotation_matrix4d(double m[4][4], double angle, t_axis axis)
+void	ft_set_base_rotation_mat4(double m[4][4], double angle, t_axis axis)
 {
 	double	m3[3][3];
 
-	ft_set_base_rotation_matrix3d(m3, angle, axis);
-	ft_3dto4d_matrix(m3, m);
+	ft_set_base_rotation_mat3(m3, angle, axis);
+	ft_3to4_mat(m3, m);
 }
 
-void	ft_set_rotation_matrix3d(double m[3][3], double angle, t_vector3d axis)
+void	ft_set_rotation_mat3(double m[3][3], double angle, t_vec3 axis)
 {
 	double	omc;
 
@@ -56,10 +56,10 @@ void	ft_set_rotation_matrix3d(double m[3][3], double angle, t_vector3d axis)
 	m[2][2] = axis.z * axis.z * omc + cos(angle);
 }
 
-void	ft_set_rotation_matrix4d(double m[4][4], double angle, t_vector3d axis)
+void	ft_set_rotation_mat4(double m[4][4], double angle, t_vec3 axis)
 {
 	double	m3[3][3];
 
-	ft_set_rotation_matrix3d(m3, angle, axis);
-	ft_3dto4d_matrix(m3, m);
+	ft_set_rotation_mat3(m3, angle, axis);
+	ft_3to4_mat(m3, m);
 }

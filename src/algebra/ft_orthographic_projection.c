@@ -12,9 +12,9 @@
 
 #include "ft_algebra.h"
 
-t_vector3d	ft_orthographic_projection(t_vector4d v)
+t_vec3	ft_orthographic_projection(t_vec4 v)
 {
-	t_vector3d	proj;
+	t_vec3	proj;
 
 	proj.x = v.x;
 	proj.y = v.y;

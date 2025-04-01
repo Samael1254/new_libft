@@ -12,18 +12,18 @@
 
 #include "ft_algebra.h"
 
-void	ft_set_scaling_matrix3d(double m[3][3], double s)
+void	ft_set_scaling_mat3(double m[3][3], double s)
 {
-	t_vector3d	v;
+	t_vec3	v;
 
-	v = ft_init_vector3d(s);
-	ft_set_stretching_matrix3d(m, v);
+	v = ft_init_vec3(s);
+	ft_set_stretching_mat3(m, v);
 }
 
-void	ft_set_scaling_matrix4d(double m[4][4], double s)
+void	ft_set_scaling_mat4(double m[4][4], double s)
 {
 	double	m3[3][3];
 
-	ft_set_scaling_matrix3d(m3, s);
-	ft_3dto4d_matrix(m3, m);
+	ft_set_scaling_mat3(m3, s);
+	ft_3to4_mat(m3, m);
 }

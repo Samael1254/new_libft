@@ -12,12 +12,12 @@
 
 #include "ft_algebra.h"
 
-double	ft_distance2d(t_vector2d a, t_vector2d b)
+double	ft_distance2d(t_vec2 a, t_vec2 b)
 {
-	return (ft_vector2d_norm(ft_sub_vectors2d(a, b)));
+	return (ft_vec2_norm(ft_sub_vec2(a, b)));
 }
 
-double	ft_distance3d(t_vector3d a, t_vector3d b)
+double	ft_distance3d(t_vec3 a, t_vec3 b)
 {
-	return (ft_vector3d_norm(ft_sub_vectors3d(a, b)));
+	return (ft_vec3_norm(ft_sub_vec3(a, b)));
 }

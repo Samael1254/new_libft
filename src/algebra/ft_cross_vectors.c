@@ -12,9 +12,9 @@
 
 #include "ft_algebra.h"
 
-t_vector3d	ft_cross_vectors3d(t_vector3d a, t_vector3d b)
+t_vec3	ft_cross_vec3(t_vec3 a, t_vec3 b)
 {
-	t_vector3d	cross;
+	t_vec3	cross;
 
 	cross.x = a.y * b.z - a.z * b.y;
 	cross.y = a.z * b.x - a.x * b.z;

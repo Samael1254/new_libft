@@ -14,22 +14,22 @@
 #include "ft_math.h"
 #include <math.h>
 
-double	ft_vector2d_norm(t_vector2d a)
+double	ft_vec2_norm(t_vec2 a)
 {
 	return (sqrt(ft_powerf(a.x, 2) + ft_powerf(a.y, 2)));
 }
 
-double	ft_vector3d_norm(t_vector3d a)
+double	ft_vec3_norm(t_vec3 a)
 {
 	return (sqrt(ft_powerf(a.x, 2) + ft_powerf(a.y, 2) + ft_powerf(a.z, 2)));
 }
 
-double	ft_vector2d_square_norm(t_vector2d a)
+double	ft_vec2_square_norm(t_vec2 a)
 {
 	return (ft_powerf(a.x, 2) + ft_powerf(a.y, 2));
 }
 
-double	ft_vector3d_square_norm(t_vector3d a)
+double	ft_vec3_square_norm(t_vec3 a)
 {
 	return (ft_powerf(a.x, 2) + ft_powerf(a.y, 2) + ft_powerf(a.z, 2));
 }

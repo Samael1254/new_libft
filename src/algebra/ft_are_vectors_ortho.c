@@ -12,16 +12,16 @@
 
 #include "ft_algebra.h"
 
-int	ft_are_vectors2d_ortho(t_vector2d a, t_vector2d b)
+int	ft_are_vec2_ortho(t_vec2 a, t_vec2 b)
 {
-	if (ft_dot_vectors2d(a, b) == 0)
+	if (ft_dot_vec2(a, b) == 0)
 		return (1);
 	return (0);
 }
 
-int	ft_are_vectors3d_ortho(t_vector3d a, t_vector3d b)
+int	ft_are_vec3_ortho(t_vec3 a, t_vec3 b)
 {
-	if (ft_dot_vectors3d(a, b) == 0)
+	if (ft_dot_vec3(a, b) == 0)
 		return (1);
 	return (0);
 }

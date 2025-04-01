@@ -12,9 +12,9 @@
 
 #include "ft_algebra.h"
 
-t_vector3d	ft_line2d_equation(t_vector2d a, t_vector2d b)
+t_vec3	ft_line2d_equation(t_vec2 a, t_vec2 b)
 {
-	t_vector3d	line;
+	t_vec3	line;
 
 	line.x = b.y - a.y;
 	line.y = a.x - b.x;

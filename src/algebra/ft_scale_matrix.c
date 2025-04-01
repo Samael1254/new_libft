@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_scale_matrix3d(double m[3][3], double lambda)
+void	ft_scale_mat3(double m[3][3], double lambda)
 {
 	int	i;
 	int	j;
@@ -25,7 +25,7 @@ void	ft_scale_matrix3d(double m[3][3], double lambda)
 	}
 }
 
-void	ft_scale_matrix4d(double m[4][4], double lambda)
+void	ft_scale_mat4(double m[4][4], double lambda)
 {
 	int	i;
 	int	j;

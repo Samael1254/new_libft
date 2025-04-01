@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_matrix3d_product(double a[3][3], double b[3][3], double prod[3][3])
+void	ft_mat3_product(double a[3][3], double b[3][3], double prod[3][3])
 {
 	int	i;
 	int	j;
@@ -29,7 +29,7 @@ void	ft_matrix3d_product(double a[3][3], double b[3][3], double prod[3][3])
 	}
 }
 
-void	ft_matrix4d_product(double a[4][4], double b[4][4], double prod[4][4])
+void	ft_mat4_product(double a[4][4], double b[4][4], double prod[4][4])
 {
 	int	i;
 	int	j;
