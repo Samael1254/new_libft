@@ -6,14 +6,14 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 10:03:05 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/11 12:07:16 by gfulconi         ###   ########.fr       */
+/*   Updated: 2025/05/25 14:02:50 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_algebra.h"
 #include <math.h>
 
-t_vec2	ft_3dto2d_vector(t_vec3 v3)
+t_vec2	ft_3to2_vec(t_vec3 v3)
 {
 	t_vec2	v2;
 
@@ -24,7 +24,7 @@ t_vec2	ft_3dto2d_vector(t_vec3 v3)
 	return (v2);
 }
 
-t_vec3	ft_4dto3d_vector(t_vec4 v4)
+t_vec3	ft_4to3_vec(t_vec4 v4)
 {
 	t_vec3	v3;
 
@@ -36,7 +36,7 @@ t_vec3	ft_4dto3d_vector(t_vec4 v4)
 	return (v3);
 }
 
-t_vec4	ft_3dto4d_vector(t_vec3 v3)
+t_vec4	ft_3to4_vec(t_vec3 v3)
 {
 	t_vec4	v4;
 
@@ -47,7 +47,7 @@ t_vec4	ft_3dto4d_vector(t_vec3 v3)
 	return (v4);
 }
 
-t_vec3	ft_2dto3d_vector(t_vec2 v2)
+t_vec3	ft_2to3_vec(t_vec2 v2)
 {
 	t_vec3	v3;
 
@@ -57,7 +57,7 @@ t_vec3	ft_2dto3d_vector(t_vec2 v2)
 	return (v3);
 }
 
-t_vec2	ft_i2dto2d_vector(t_ivec2 vi2)
+t_vec2	ft_i2to2_vec(t_ivec2 vi2)
 {
 	t_vec2	v2;
 

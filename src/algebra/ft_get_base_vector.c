@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 12:36:11 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/12/11 12:41:20 by gfulconi         ###   ########.fr       */
+/*   Updated: 2025/05/25 14:04:07 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,5 @@ t_vec3	ft_get_base_vec3(t_axis axis)
 
 t_vec4	ft_get_base_vec4(t_axis axis)
 {
-	return (ft_3dto4d_vector(ft_get_base_vec3(axis)));
+	return (ft_3to4_vec(ft_get_base_vec3(axis)));
 }

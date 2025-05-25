@@ -89,20 +89,14 @@ $(BUILD_DIR)%.o: $(SOURCES_DIR)*/%.c
 	@ mkdir -p build
 	@ $(CC) $(CFLAGS) -c $< -o $@
 
-check_norm:
-	@ echo " \033[33m... checking norminette\033[m"
-	@ norminette src > /dev/null 2>&1 && tput cuu1 && tput el && echo " \033[32m norminette valid\033[m" || (tput cuu1 && tput el && echo " \033[31m norminette check failed\033[m"; true)
-
 compile_msg:
 	@ echo " \033[33m... building sources\033[m"
 
 all: $(NAME)
 
 clean:
+	@ echo " \033[33mCleaning\033[m"
 	@ rm -f $(OBJECTS)
-	@ rm -f $(BUILD_DIR)*.?1
-	@ rm -f $(BUILD_DIR)*.txt
-	@ rm -f $(BUILD_DIR)compile_msg
 	@ rm -df $(BUILD_DIR)
 	@ echo " \033[32m object files cleaned\033[m"
 
@@ -113,4 +107,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY : clean fclean re all check_norm
+.PHONY : clean fclean re all
