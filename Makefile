@@ -74,7 +74,7 @@ OBJECTS = $(addprefix $(BUILD_DIR), $(notdir $(SOURCES:.c=.o)))
 
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror -I$(HEADERS_DIR) -g
+CFLAGS = -Wall -Wextra -Werror -I$(HEADERS_DIR) -O3
 
 $(NAME): compile_msg $(OBJECTS)
 	@ tput cuu1 && tput el

@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:29:26 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/22 12:04:25 by gfulconi         ###   ########.fr       */
+/*   Updated: 2025/05/29 17:19:32 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 
 int	ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, 1);
+	if (write(fd, &c, 1) == -1)
+		return (0);
 	return (1);
 }
 

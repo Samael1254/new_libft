@@ -6,7 +6,7 @@
 /*   By: gfulconi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 15:09:11 by gfulconi          #+#    #+#             */
-/*   Updated: 2024/11/20 15:09:11 by gfulconi         ###   ########.fr       */
+/*   Updated: 2025/05/29 17:17:26 by gfulconi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void	ft_sorted_list_insert(t_list **begin_list, void *data,
 		return ;
 	}
 	iter = *begin_list;
+	temp = iter;
 	while ((*cmp)(data, iter->data) > 0)
 	{
 		temp = iter;

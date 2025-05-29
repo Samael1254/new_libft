@@ -16,8 +16,9 @@ double	ft_atod(const char *nptr)
 
 	while (ft_isspace(*nptr))
 		nptr++;
-	if (*nptr)
-		sign = 1 - 2 * (*nptr == '-');
+	if (!*nptr)
+		return (0);
+	sign = 1 - 2 * (*nptr == '-');
 	integer = (double)ft_atoi(nptr);
 	ptr_dot = ft_strchr(nptr, '.');
 	if (!ptr_dot)
